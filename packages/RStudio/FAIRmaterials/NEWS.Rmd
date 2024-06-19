@@ -1,0 +1,19 @@
+# File containing notes about version updates
+
+# 0.0.2: The Beginning
+
+*This is the very first build of FAIRmaterials. It will still require a lot of work before it is completely up and going, but for now this is a very good start. We have functions for FAIRifying: ftir, ivallreal, powerplant, QUV, and SunsVoc data. We look forward to the future where we have more functions with more uses!
+
+# 0.1.0: The Next Update
+
+*It's been a long time since the first installment of this package, but we came back an overhauled a lot of things here. Should have a lot of better features here.
+
+# 0.4.0: Renaming and Shortening Output
+
+We added functions for renaming data and for shortening the output of FAIRified files to only the user inputs.
+
+# 0.4.2: Enhanced Ontology Tools in 'FAIRmaterials'
+
+We're excited to announce a significant redesign in the 'FAIRmaterials' package! The updated tool now seamlessly translates ontological terms and corresponding data from CSV files—accessible via our new template [here][1]. The RDF triples generated are efficiently stored in OWL and JSON-LD formats, along with enhanced visualization capabilities. This update facilitates data accessibility, interoperability, and knowledge unification and ensures a simplified process for the creation of ontologies.
+
+[1]: https://docs.google.com/spreadsheets/d/1k7gFRc1Yslc-m65aWfFCxqk5UtrKZl9c3GyEFQvLSFU/edit?usp=sharing "FAIR CSV Template"

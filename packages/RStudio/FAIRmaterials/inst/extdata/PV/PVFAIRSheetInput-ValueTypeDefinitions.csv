@@ -1,0 +1,20 @@
+ValueType Name,Belongs to Ontology,Domain,Range,Definition of Property,Logical Axioms,Alternative Name(s),fullName
+The name of the valuetype of a variable that you would like to include in your ontology schema.,"If the valuetype already exists in an ontology below, select the ontology from the dropdown menu. Otherwise, please leave blank.","Please enter the term that the relationship starts from. (Example: If you would like to define the relationship that a tool term ""outputs"" an image term, select the tool term).","Please enter the value type you would like to attach to the term
+*Only fill out for Data Property relationships*","Please provide the definition the relationship. For reccomendation on a definition, search the term in https://schema.org. If the term is already in a selected ontology, please leave blank.","Please provide any logic you would like to attach to your term. For information and examples on logical axioms, please visit https://www.w3.org/TR/daml+oil-axioms/ 
+*Optional*","Please provide any alternative names for the relationship in the literature.
+*Optional*",
+value,PMDCo,ProdModuleID,xsd:integer,,,,PMDCo:value(ProdModuleID->xsd:integer)
+value,PMDCo,PMDCo:Manufacturer,xsd:string,,,,PMDCo:value(PMDCo:Manufacturer->xsd:string)
+value,PMDCo,CellCount,xsd:integer,,,,PMDCo:value(CellCount->xsd:integer)
+value,PMDCo,FrameColor,xsd:string,,,,PMDCo:value(FrameColor->xsd:string)
+value,PMDCo,BacksheetColor,xsd:string,,,,PMDCo:value(BacksheetColor->xsd:string)
+value,PMDCo,BacksheetMaterial,xsd:string,,,,PMDCo:value(BacksheetMaterial->xsd:string)
+value,PMDCo,EncapsulantMaterial,xsd:string,,,,PMDCo:value(EncapsulantMaterial->xsd:string)
+value,PMDCo,PMDCo:Length,xsd:float,,,,PMDCo:value
+value,PMDCo,PMDCo:Width,xsd:float,,,,PMDCo:value
+value,PMDCo,PMDCo:Thickness,xsd:float,,,,PMDCo:value
+value,PMDCo,PMDCo:Weight,xsd:float,,,,PMDCo:value
+value,PMDCo,ModuleEfficiency,xsd:integer,,,,PMDCo:value
+value,PMDCo,FluorescencePattern,xsd:string,,,,PMDCo:value
+value,PMDCo,PowerSTC,xsd:integer,,,,PMDCo:value
+value,PMDCo,TemperatureNOCT,xsd:float,,,,PMDCo:value

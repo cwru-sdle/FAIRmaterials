@@ -1,0 +1,131 @@
+@base <localhost://> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix qudt: <http://qudt.org/2.1/vocab/unit#> .
+@prefix sd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix PMDCo: <https://w3id.org/pmd/co#> .
+@prefix QUDT: <https://qudt.org/vocab/unit/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix mds-XraySample: <https://cwrusdle.bitbucket.io/xraySample#> .
+
+mds-XraySample:MaterialName
+    rdf:label "MaterialName" ;
+    a rdfs:Class ;
+    rdfs:comment "Name of the material." ;
+    rdfs:subClassOf pmd:MaterialDesignation ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+mds-XraySample:Ontology
+    dcterms:creator """Alexander C. Harding Bradley, Balashanmuga Priyan Rajamohan, 
+Mohommad Redad Mehdi, Weiqi Yue, Finley Holt, Pawan K. Tripathi, 
+ Erika I. Barcelos, Matthew Willard, Frank Ernst, Roger H. French""" ;
+    dcterms:description "XRD Sample Ontology for the FAST Beamline at CHESS." ;
+    dcterms:title "mds-XraySample" ;
+    rdf:label <https://cwrusdle.bitbucket.io/xraySample#> ;
+    a owl:Ontology ;
+    owl:versionInfo "0.2" .
+
+mds-XraySample:ProcessingMethod
+    rdf:label "ProcessingMethod" ;
+    a rdfs:Class ;
+    rdfs:comment "The manufacturing method by ehich the sample was created." ;
+    rdfs:subClassOf pmd:ManufacturingProcess ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+mds-XraySample:SampleID
+    rdf:label "SampleID" ;
+    a rdfs:Class ;
+    rdfs:comment "A human-labeled sample identifier." ;
+    rdfs:subClassOf pmd:SpecimenName ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+mds-XraySample:XraySample
+    rdf:label "XraySample" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    rdfs:subClassOf pmd:Sample ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+mds-XraySample:XrayTool
+    rdf:label "XrayTool" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+mds-XraySample:inputOf
+    a owl:ObjectProperty ;
+    rdfs:domain mds-XraySample:XraySample ;
+    rdfs:range mds-XraySample:XrayTool .
+
+pmd:Length
+    rdf:label "Length" ;
+    a rdfs:Class ;
+    rdfs:comment "Length of the sample." ;
+    skos:altLabel "_" ;
+    PMDCo:unit qudt:MilliM .
+
+pmd:ManufacturingProcess
+    rdf:label "ManufacturingProcess" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+pmd:MaterialDesignation
+    rdf:label "MaterialDesignation" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+pmd:Sample
+    rdf:label "Sample" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+pmd:SpecimenName
+    rdf:label "SpecimenName" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+pmd:Thickness
+    rdf:label "Thickness" ;
+    a rdfs:Class ;
+    rdfs:comment "Thickness of the sample." ;
+    skos:altLabel "_" ;
+    PMDCo:unit qudt:MilliM .
+
+pmd:Width
+    rdf:label "Width" ;
+    a rdfs:Class ;
+    rdfs:comment "Width of the sample." ;
+    skos:altLabel "_" ;
+    PMDCo:unit qudt:MilliM .
+
+pmd:characteristicOf
+    a owl:ObjectProperty ;
+    rdfs:domain mds-XraySample:XraySample ;
+    rdfs:range mds-XraySample:MaterialName, mds-XraySample:ProcessingMethod, pmd:Length, pmd:Thickness, pmd:Width .
+
+pmd:hasIdentifier
+    a owl:ObjectProperty ;
+    rdfs:domain mds-XraySample:XraySample ;
+    rdfs:range mds-XraySample:SampleID .
+
+pmd:value
+    a owl:DatatypeProperty ;
+    rdfs:domain mds-XraySample:MaterialName, mds-XraySample:ProcessingMethod, mds-XraySample:SampleID, pmd:Length, pmd:Thickness, pmd:Width ;
+    rdfs:range sd:float, sd:string .
+

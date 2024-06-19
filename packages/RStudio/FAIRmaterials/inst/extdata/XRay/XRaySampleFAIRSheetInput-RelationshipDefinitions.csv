@@ -1,0 +1,11 @@
+Relationship Name,Belongs to Ontology,Domain,Range,Definition,Logical Axioms,Alternative Name(s),fullName
+The name of the relationship between two terms that you would like to use in your ontology schema.,"If the relationship already exists in an ontology below, select the ontology from the dropdown menu. Otherwise, please leave blank.","Please enter the term that the relationship starts from. (Example: If you would like to define the relationship that a tool term ""outputs"" an image term, select the tool term).","Please enter the term that the relationship goes to. Example: If you would like to define the relationship that a tool term ""outputs"" an image, select the image variable.","Please provide the definition the relationship. For reccomendation on a definition, search the term in https://schema.org. If the term is already in a selected ontology, please leave blank.","Please provide any logic you would like to attach to your term. For information and examples on logical axioms, please visit https://www.w3.org/TR/daml+oil-axioms/ 
+*Optional*","Please provide any alternative names for the relationship in the literature.
+*Optional*",
+hasIdentifier,pmd,XraySample,SampleID,,,,pmd:hasIdentifier
+characteristicOf,pmd,XraySample,ProcessingMethod,,,,pmd:characteristicOf
+characteristicOf,pmd,XraySample,MaterialName,,,,pmd:characteristicOf
+characteristicOf,pmd,XraySample,pmd:Length,,,,pmd:characteristicOf
+characteristicOf,pmd,XraySample,pmd:Width,,,,pmd:characteristicOf
+characteristicOf,pmd,XraySample,pmd:Thickness,,,,pmd:characteristicOf
+inputOf,pmd,XraySample,XrayTool,,,,

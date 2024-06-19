@@ -1,0 +1,12 @@
+"Ontology Name
+*Name of the ontology*",mds-XraySample
+"Ontology URI
+*Base URI of the ontology (the ontology URI, minus the name of the ontology)*",https://cwrusdle.bitbucket.io/xraySample#
+"Ontology Version
+*Version of the ontology*",0.2
+"Ontology Author(s)
+*Authors of the ontoloy (seperate multiple authors by a comma)*","Alexander C. Harding Bradley, Balashanmuga Priyan Rajamohan, 
+Mohommad Redad Mehdi, Weiqi Yue, Finley Holt, Pawan K. Tripathi, 
+ Erika I. Barcelos, Matthew Willard, Frank Ernst, Roger H. French"
+"Ontology Description
+*Description of the ontology and ontology domain*",XRD Sample Ontology for the FAST Beamline at CHESS.

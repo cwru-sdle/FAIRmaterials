@@ -1,0 +1,235 @@
+@base <localhost://> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix pmd: <https://w3id.org/pmd/co/> .
+@prefix PMDCo: <https://w3id.org/pmd/co#> .
+@prefix QUDT: <https://qudt.org/vocab/unit/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix PVModuleOntology: <https://cwrusdle.bitbucket.io/PVModuleOntology/> .
+
+PVModuleOntology:BacksheetColor
+    rdf:label "BacksheetColor" ;
+    a rdfs:Class ;
+    rdfs:comment "Color of the backsheet" ;
+    rdfs:subClassOf PVModuleOntology:Color ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:BacksheetMaterial
+    rdf:label "BacksheetMaterial" ;
+    a rdfs:Class ;
+    rdfs:comment "Material the backsheet is made out of" ;
+    rdfs:subClassOf PMDCo:MaterialDesignation ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:CellCount
+    rdf:label "CellCount" ;
+    a rdfs:Class ;
+    rdfs:comment "The number of cells in a module" ;
+    rdfs:subClassOf PMDCo:ValueObject ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:Color
+    rdf:label "Color" ;
+    a rdfs:Class ;
+    rdfs:comment "the visual perception based on the electromagnetic spectrum" ;
+    rdfs:subClassOf PMDCo:ValueObject ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:EncapsulantMaterial
+    rdf:label "EncapsulantMaterial" ;
+    a rdfs:Class ;
+    rdfs:comment "Material the encapsulant is made out of" ;
+    rdfs:subClassOf PMDCo:MaterialDesignation ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:FluorescencePattern
+    rdf:label "FluorescencePattern" ;
+    a rdfs:Class ;
+    rdfs:comment "Pattern of modules under UV Fluorescence (square or ring)" ;
+    rdfs:subClassOf PMDCo:ValueObject ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:FrameColor
+    rdf:label "FrameColor" ;
+    a rdfs:Class ;
+    rdfs:comment "The color of the module frame" ;
+    rdfs:subClassOf PVModuleOntology:Color ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:ModuleEfficiency
+    rdf:label "ModuleEfficiency" ;
+    a rdfs:Class ;
+    rdfs:comment "The efficiency of the solar module at standard test condition (STC)" ;
+    rdfs:subClassOf PMDCo:ValueObject ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:Ontology
+    dcterms:creator """Alexander C. Harding Bradley,Balashanmuga Priyan Rajamohan,Raymond Wieser,Benjamin
+Pierce,Jarod Kaltenbaugh,Hayden Caldwell,Arafath Nihar,Kiefer Lin,Jiana Kanbo,Mengjie Li,Kris Davis,Yinghui Wu,Laura S. Bruckman,Erika
+I. Barcelos,Roger H. French""" ;
+    dcterms:description "An ontology describing the characteristics of a PV Module." ;
+    dcterms:title "PVModuleOntology" ;
+    rdf:label <https://cwrusdle.bitbucket.io/PVModuleOntology/> ;
+    a owl:Ontology ;
+    owl:versionInfo "0.2" .
+
+PVModuleOntology:PowerSTC
+    rdf:label "PowerSTC" ;
+    a rdfs:Class ;
+    rdfs:comment "DC power at Standard Test Condition (STC). STC is defined as 1000 W/m2 irradiance, 25C and ASTM G173-03 standard solar spectrum" ;
+    rdfs:subClassOf PMDCo:ValueObject ;
+    skos:altLabel "_" ;
+    PMDCo:unit QUDT:KiloW .
+
+PVModuleOntology:ProdBacksheet
+    rdf:label "ProdBacksheet" ;
+    a rdfs:Class ;
+    rdfs:comment "A backsheet of a photovoltaic module" ;
+    rdfs:subClassOf PMDCo:Component ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:ProdEncapsulant
+    rdf:label "ProdEncapsulant" ;
+    a rdfs:Class ;
+    rdfs:comment "An encapsulant of a photovoltaic module" ;
+    rdfs:subClassOf PMDCo:Component ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:ProdJunctionBox
+    rdf:label "ProdJunctionBox" ;
+    a rdfs:Class ;
+    rdfs:comment "An encapsulant of a photovoltaic module" ;
+    rdfs:subClassOf PMDCo:Component ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:ProdModule
+    rdf:label "ProdModule" ;
+    a rdfs:Class ;
+    rdfs:comment "A solar module product" ;
+    rdfs:subClassOf PMDCo:ProcessingNode ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:ProdModuleID
+    rdf:label "ProdModuleID" ;
+    a rdfs:Class ;
+    rdfs:comment "Alphanumeric identifier for the metadata document" ;
+    rdfs:subClassOf PMDCo:NodeSerialNumber ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PVModuleOntology:TemperatureNOCT
+    rdf:label "TemperatureNOCT" ;
+    a rdfs:Class ;
+    rdfs:comment "The nominal operating cell temperature (NOCT) of a solar module" ;
+    rdfs:subClassOf PMDCo:Temperature ;
+    skos:altLabel "_" ;
+    PMDCo:unit QUDT:DEG_C .
+
+PMDCo:Component
+    rdf:label "Component" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PMDCo:Length
+    rdf:label "Length" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit QUDT:CentiM .
+
+PMDCo:Manufacturer
+    rdf:label "Manufacturer" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PMDCo:MaterialDesignation
+    rdf:label "MaterialDesignation" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    rdfs:subClassOf PMDCo:ProcessingNode ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PMDCo:NodeSerialNumber
+    rdf:label "NodeSerialNumber" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PMDCo:ProcessingNode
+    rdf:label "ProcessingNode" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PMDCo:Temperature
+    rdf:label "Temperature" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PMDCo:Thickness
+    rdf:label "Thickness" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit QUDT:CentiM .
+
+PMDCo:ValueObject
+    rdf:label "ValueObject" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit "_" .
+
+PMDCo:Weight
+    rdf:label "Weight" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit QUDT:KiloGM .
+
+PMDCo:Width
+    rdf:label "Width" ;
+    a rdfs:Class ;
+    rdfs:comment "_" ;
+    skos:altLabel "_" ;
+    PMDCo:unit QUDT:CentiM .
+
+PMDCo:characteristic
+    a owl:ObjectProperty ;
+    rdfs:domain PVModuleOntology:ProdBacksheet, PVModuleOntology:ProdEncapsulant, PVModuleOntology:ProdModule ;
+    rdfs:range PVModuleOntology:BacksheetColor, PVModuleOntology:BacksheetMaterial, PVModuleOntology:CellCount, PVModuleOntology:EncapsulantMaterial, PVModuleOntology:FluorescencePattern, PVModuleOntology:FrameColor, PVModuleOntology:ModuleEfficiency, PVModuleOntology:PowerSTC, PVModuleOntology:TemperatureNOCT, PMDCo:Length, PMDCo:Manufacturer, PMDCo:NodeSerialNumber, PMDCo:Thickness, PMDCo:Weight, PMDCo:Width .
+
+PMDCo:component
+    a owl:ObjectProperty ;
+    rdfs:domain PVModuleOntology:ProdModule ;
+    rdfs:range PVModuleOntology:ProdBacksheet, PVModuleOntology:ProdEncapsulant, PVModuleOntology:ProdJunctionBox .
+
+PMDCo:value
+    a owl:DatatypeProperty ;
+    rdfs:domain PVModuleOntology:BacksheetColor, PVModuleOntology:BacksheetMaterial, PVModuleOntology:CellCount, PVModuleOntology:EncapsulantMaterial, PVModuleOntology:FluorescencePattern, PVModuleOntology:FrameColor, PVModuleOntology:ModuleEfficiency, PVModuleOntology:PowerSTC, PVModuleOntology:ProdModuleID, PVModuleOntology:TemperatureNOCT, PMDCo:Length, PMDCo:Manufacturer, PMDCo:Thickness, PMDCo:Weight, PMDCo:Width ;
+    rdfs:range sd:float, sd:integer, sd:string .
+

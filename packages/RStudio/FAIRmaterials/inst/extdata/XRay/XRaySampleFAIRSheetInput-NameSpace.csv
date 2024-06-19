@@ -1,0 +1,4 @@
+Prefix Name,Ontology URL,Ontology File
+Create a prefix for the ontology that you would like to import into your own ontology,Enter the URL of the ontology's OWL file,Enter the URI of the location of the ontology OWL online
+pmd,https://w3id.org/pmd/co/,
+qudt,http://qudt.org/2.1/vocab/unit#,

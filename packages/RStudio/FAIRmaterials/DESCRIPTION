@@ -1,0 +1,396 @@
+Package: FAIRmaterials
+Title: Ontology Tools with Data FAIRification in Development
+Version: 0.4.2
+Authors@R: c(
+    person(
+        given = c("Jonathan", "E"),
+        family = "Gordon",
+        role = c("aut"),
+        email = "jgordon5@bowdoin.edu",
+        comment = c(ORCID = "0009-0007-5958-7386")
+    ),
+    person(
+        given = "Alexander",
+        family = "Harding Bradley",
+        role = c("aut"),
+        email = "ach159@case.edu",
+        comment = c(ORCID = "0009-0000-2917-773X")
+    ),
+    person(
+        given = "Priyan",
+        family = "Rajamohan",
+        role = c("aut"),
+        email = "bxr261@case.edu",
+        comment = c(ORCID = "0009-0003-5326-1706")
+    ),
+    person(
+        given = "Nathaniel",
+        family = "Hahn",
+        role = c("aut"),
+        email = "nrh51@case.edu"
+    ),
+    person(
+        given = "Kiefer",
+        family = "Lin",
+        role = c("aut"),
+        email = "kyl29@case.edu"
+    ),
+    person(
+        given = "Arafath",
+        family = "Nihar",
+        role = c("aut"),
+        email = "arafath.nihar@case.edu",
+        comment = c(ORCID = "0000-0003-4826-290X")
+    ),
+    person(
+        given = "Hayden",
+        family = "Cadwell",
+        role = c("aut"),
+        email = "hwc11@case.edu"
+    ),
+    person(
+        given = "Jiana",
+        family = "Kambo",
+        role = c("aut"),
+        email = "jxk1403@case.edu"
+    ),
+    person(
+        given = "Jayvic",
+        family = "Jimenez",
+        role = c("aut"),
+        comment = c(ORCID = "0000-0002-2342-5648")
+    ),
+    person(
+        given = c("Kristen", "J"),
+        family = "Hernandez",
+        role = c("aut"),
+        email = "kjh125@case.edu",
+        comment = c(ORCID = "0000-0001-6139-1218")
+    ),
+    person(
+        given = "Hein",
+        family = "Htet-Aung",
+        role = c("aut"),
+        email = "hxh483@case.edu",
+        comment = c(ORCID = "0000-0002-8191-8213")
+    ),
+    person(
+        given = "Brian",
+        family = "Giera",
+        role = c("aut"),
+        email = "giera1@llnl.gov",
+        comment = c(ORCID = "0000-0001-6543-7498")
+    ),
+    person(
+        given = "Weiqi",
+        family = "Yue",
+        role = c("aut"),
+        email = "wxy215@case.edu",
+        comment = c(ORCID = "0000-0002-3253-7991")
+    ),
+    person(
+        given = "Mohommad",
+        family = "Redad Mehdi",
+        role = c("aut"),
+        email = "mxm1684@case.edu",
+        comment = c(ORCID = "0000-0002-0593-5222")
+    ),
+    person(
+        given = "Finley",
+        family = "Holt",
+        role = c("aut"),
+        email = "frh10@case.edu"
+    ),
+    person(
+        given = "Quynh",
+        family = "Tran",
+        role = c("aut"),
+        email = "qdt@case.edu",
+        comment = c(ORCID = "0009-0006-4025-1834")
+    ),
+    person(
+        given = "Gabriel",
+        family = "Ponon",
+        role = c("aut"),
+        email = "gop2@case.edu",
+        comment = c(ORCID = "0000-0002-9366-6199")
+    ),
+    person(
+        given = "Daniel",
+        family = "Savage",
+        role = c("aut"),
+        email = "dansavage@lanl.gov",
+        comment = c(ORCID = "0000-0001-9973-2030")
+    ),
+    person(
+        given = "Donald",
+        family = "Brown",
+        role = c("aut"),
+        email = "dbrown@lanl.gov"
+    ),
+    person(
+        given = "Jarod",
+        family = "Kaltenbaugh",
+        role = c("aut"),
+        email = "jkaltenbaugh@knights.ucf.edu",
+        comment = c(ORCID = "0009-0007-4576-7714")
+    ),
+    person(
+        given = "Kush",
+        family = "Havinal",
+        role = c("aut"),
+        email = "ku769704@ucf.edu "
+    ),
+    person(
+        given = "Nicholas",
+        family = "Gray",
+        role = c("aut"),
+        email = "ba566783@ucf.edu"
+    ),
+    person(
+        given = "Max",
+        family = "Liggett",
+        role = c("aut"),
+        email = "mal252@case.edu"
+    ),
+    person(
+        given = c("Benjamin", "G"),
+        family = "Pierce",
+        role = c("aut"),
+        email = "bgp12@case.edu",
+        comment = c(ORCID = "0000-0002-9080-4584")
+    ),
+    person(
+        given = "Raymond",
+        family = "Wieser",
+        role = c("aut"),
+        email = "rxw497@case.edu",
+        comment = c(ORCID = "0000-0003-1531-6430")
+    ),
+    person(
+        given = "Yangxin",
+        family = "Fan",
+        role = c("aut"),
+        comment = c(ORCID = "0000-0003-1728-9560")
+    ),
+    person(
+        given = "Tommy",
+        family = "Ciardi",
+        role = c("aut"),
+        email = "tommy.ciardi@case.edu"
+    ),
+    person(
+        given = c("Olatunde", "J"),
+        family = "Akanbi",
+        role = c("aut"),
+        email = "olatunde.akanbi@case.edu",
+        comment = c(ORCID = "0000-0001-7719-2619")
+    ),
+    person(
+        given = "Hadiza",
+        family = "Iawal",
+        role = c("aut"),
+        email = "mxs2087@case.edu",
+        comment = c(ORCID = "0000-0001-5086-2344")
+    ),
+    person(
+        given = "Will",
+        family = c("Oltjen"),
+        role = c("aut"),
+        email = "william.oltjen@case.edu",
+        comment = c(ORCID = "0000-0003-0380-1033")
+    ),
+    person(
+        given = "Maliesha",
+        family = "Kalutotage",
+        role = c("aut"),
+        email = "aml334@case.edu",
+        comment = c(ORCID = "0009-0009-6440-8180")
+    ),
+    person(
+        given = "Antony",
+        family = "Lino",
+        role = c("aut"),
+        email = "aml334@case.edu"
+    ),
+    person(
+        given = "Van",
+        family = "Tran",
+        role = c("aut"),
+        email = "vxt101@case.edu",
+        comment = c(ORCID = "0009-0008-4355-0543")
+    ),
+    person(
+        given = "Mingjian",
+        family = "Lu",
+        role = c("aut"),
+        email = "mingjian.lu@case.edu"
+    ),
+    person(
+        given = "Xuanji",
+        family = "Yu",
+        role = c("aut"),
+        email = "xuanji.yu@case.edu",
+        comment = c(ORCID = "0000-0003-1967-3769")
+    ),
+    person(
+        given = "Liangyi",
+        family = "Huang",
+        role = c("aut"),
+        email = "liangyi.huang@case.edu",
+        comment = c(ORCID = "0000-0003-0845-3293")
+    ),
+    person(
+        given = "Zelin",
+        family = "Li",
+        role = c("aut"),
+        email = "zelin.li@case.edu",
+        comment = c(ORCID = "0000-0002-6287-3697")
+    ),
+    person(
+        given = "Abhishek",
+        family = "Daundkar",
+        role = c("aut"),
+        email = "abhishek.daundkar@case.edu"
+    ),
+    person(
+        given = "Hope",
+        family = "Omodolor",
+        role = c("aut"),
+        email = "hope.omodolor@case.edu",
+        comment = c(ORCID = "0009-0005-7842-406X")
+    ),
+    person(
+        given = "Deepa",
+        family = "Bhuvanagiri",
+        role = c("aut"),
+        email = "deepa.bhuvanagiri@case.edu",
+        comment = c(ORCID = "0000-0002-5896-545X")
+    ),
+    person(
+        given = "Mirra",
+        family = "Rasmussen",
+        role = c("aut"),
+        email = "mirra.rasmussen@case.edu"
+    ),
+    person(
+        given = "Sameera",
+        family = "Nalin-Venkat",
+        role = c("aut"),
+        email = "sameera.nalinvenkat@case.edu",
+        comment = c(ORCID = "0000-0002-9114-4602")
+    ),
+    person(
+        given = "Tian",
+        family = "Wang",
+        role = c("aut"),
+        email = "tian.wang@case.edu",
+        comment = c(ORCID = "0000-0002-6088-4405")
+    ),
+    person(
+        given = "Rounak",
+        family = "Chawla",
+        role = c("aut"),
+        email = "rounak.chawla@case.edu"
+    ),
+    person(
+        given = "Leean",
+        family = "Jo",
+        role = c("aut"),
+        email = "leean.jo@case.edu",
+        comment = c(ORCID = "0000-0001-7026-3779")
+    ),
+    person(
+        given = c("Jeffrey", "M"),
+        family = "Yarus",
+        role = c("aut"),
+        email = "jmy41@case.edu",
+        comment = c(ORCID = "0000-0002-9331-9568")
+    ),
+    person(
+        given = "Kristopher O",
+        family = "Davis",
+        role = c("aut"),
+        email = "kristopher.davis@ucf.edu",
+        comment = c(ORCID = "0000-0002-5772-6254")
+    ),
+    person(
+        given = "Mengjie",
+        family = "Li",
+        role = c("aut"),
+        email = "mengjie.li@ucf.edu",
+        comment = c(ORCID = "0000-0002-9531-2474")
+    ),
+    person(
+        given = "Yinghui",
+        family = "Wu",
+        role = c("aut"),
+        email = "yinghui.wu@case.edu",
+        comment = c(ORCID = "0000-0003-3991-5155")
+    ),
+    person(
+        given = c("Pawan", "K"),
+        family = "Tripathi",
+        role = c("aut"),
+        email = "pkt19@case.edu",
+        comment = c(ORCID = "0000-0002-8604-7744")
+    ),
+    person(
+        given = c("Laura", "S"),
+        family = "Bruckman",
+        role = c("aut"),
+        email = "laura.bruckman@case.edu",
+        comment = c(ORCID = "0000-0003-1271-1072")
+    ),
+    person(
+        given = c("Erika", "I"),
+        family = "Barcelos",
+        role = c("aut"),
+        email = "erika.barcelos@case.edu",
+        comment = c(ORCID = "0000-0002-9273-8488")
+    ),
+    person(
+        given = c("Roger", "H"),
+        family = "French",
+        role = c("aut", "cre", "cph"),
+        email = "roger.french@case.edu",
+        comment = c(ORCID = "0000-0002-6162-0532")))
+Description: Translates several CSV files with ontological terms and corresponding
+    data into RDF triples. These RDF triples are stored in OWL and JSON-LD files,
+    facilitating data accessibility, interoperability, and knowledge unification.
+    The triples are also visualized in a graph saved as an SVG. The input CSVs
+    must be formatted with a template from a public Google Sheet; see README or
+    vignette for more information. This is a tool is used by the SDLE Research
+    Center at Case Western Reserve University to create and visualize material
+    science ontologies, and it includes example ontologies to demonstrate its
+    capabilities. This work was supported by the U.S. Department of Energy’s
+    Office of Energy Efficiency and Renewable Energy (EERE) under Solar Energy
+    Technologies Office (SETO) Agreement Numbers E-EE0009353 and DE-EE0009347,
+    Department of Energy (National Nuclear Security Administration) under Award
+    Number DE-NA0004104 and Contract number B647887, and U.S. National Science
+    Foundation Award under Award Number 2133576.
+License: BSD_3_clause + file LICENSE
+Encoding: UTF-8
+LazyData: false
+Imports:
+    dplyr,
+    rdflib,
+    jsonld,
+    httr,
+    utils, 
+    DiagrammeR,
+    DiagrammeRsvg,
+    stringr,
+    xml2,
+    tidyr,
+    readr
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Depends: 
+    R (>= 3.1.1)
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+VignetteBuilder: knitr

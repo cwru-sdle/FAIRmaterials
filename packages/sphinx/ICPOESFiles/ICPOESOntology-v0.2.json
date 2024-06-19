@@ -1,0 +1,1714 @@
+[
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/isCalibrationSample",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "isCalibrationSample"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/ValueObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Boolean value corresponding to whether the sample is for calibration of ICPOES machine"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/resource",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2002/07/owl#FunctionalProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ArgonFlowRate"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/ValueObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "resource"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "has resource"
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/Volume",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Volume"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/ValueObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "the amount of space that a substance or object occupies"
+      }
+    ],
+    "https://w3id.org/pmd/co/unit": [
+      {
+        "@id": "http://qudt.org/2.1/vocab/unit#MilliL"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/TestingRate",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "TestingRate"
+      },
+      {
+        "@language": "en",
+        "@value": "Testing Rate"
+      },
+      {
+        "@language": "de",
+        "@value": "Prüfgeschwindigkeit"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/ValueObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "de",
+        "@value": "während des Versuchs verwendete Geschwindigkeit(en)"
+      },
+      {
+        "@language": "en",
+        "@value": "rate (resp. rates) used during the test"
+      }
+    ],
+    "https://w3id.org/pmd/co/definitionSource": [
+      {
+        "@language": "en",
+        "@value": "DIN EN ISO 6892-1:2019"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/TestPieceInfo",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "TestPieceInfo"
+      },
+      {
+        "@language": "en",
+        "@value": "Test Piece Info"
+      },
+      {
+        "@language": "de",
+        "@value": "Prüfkörperinformationen"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/ValueObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "This property is used to provide information on a test piece such as its geometric shape, classification, and other parameters, including specifications and nominal values. The information is provided with respect to corresponding standards."
+      },
+      {
+        "@language": "de",
+        "@value": "Diese Eigenschaft wird verwendet, um Informationen über einen Prüfkörper zu liefern, wie z. B. seine geometrische Form, seine Klassifizierung und andere Parameter, einschließlich von Spezifikationen und Nennwerte. Die Informationen werden in Bezug auf die entsprechenden Normen bereitgestellt."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/input",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESProcess"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESSamplePrepProcess"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/NonTransformativeAnalysisProcess"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "input"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/pmd/co/Dataset"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/Specimen"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/TestPiece"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#used"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/participant"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/inputOf"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "has input"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "This property is used to link the processes to their input objects."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/executedBy",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESProcess"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/Process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "executed by"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/Spectrometer"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/ProcessingNode"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#wasAssociatedWith"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/executes"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "This property represents which process is executed by which process node."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/subordinateProcess",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESSamplePrepProcess"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/Process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "subordinate process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/FilteringProcess"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/dilutionProcess"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/Process"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/superordinateProcess"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "has subordinate process"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "This property is used to link a process to its subordinate processes."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/output",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESSamplePrepProcess"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/Spectrometer"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/NonTransformativeAnalysisProcess"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "output"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://w3id.org/pmd/co/Dataset"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/TestPiece"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#generated"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/participant"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/outputOf"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@value": "has output"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "This property is used to link the processes to their output objects"
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESProcess",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ICPOESProcess"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/SpectometryMeasuringProcess"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "A process related to ICPOES"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/MeasuringProcess",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "MeasuringProcess"
+      },
+      {
+        "@language": "de",
+        "@value": "Messprozess"
+      },
+      {
+        "@language": "en",
+        "@value": "Measuring Process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/AnalysingProcess"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A measurement process is an analysis process that acquires data (usually expressed in numbers) by using tools."
+      }
+    ]
+  },
+  {
+    "@id": "https://www.w3.org/TR/2014/REC-rdf-schema-20140225/Bag",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Bag"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/TestPiece",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "TestPiece"
+      },
+      {
+        "@language": "de",
+        "@value": "Prüfkörper"
+      },
+      {
+        "@language": "en",
+        "@value": "Test Piece"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/Sample"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Part of a sample with specified dimensions, machined or un-machined, brought to a required condition for submission to a given test."
+      },
+      {
+        "@language": "de",
+        "@value": "Teil einer Probe mit bestimmten Dimensionen, bearbeitet oder unbearbeitet, der in einen erforderlichen Zustand gebracht wird, um einer bestimmten Prüfung unterzogen zu werden."
+      }
+    ],
+    "https://w3id.org/pmd/co/definitionSource": [
+      {
+        "@language": "en",
+        "@value": "EN 10021:2006-12 (European standardization committee: CEN/TC 459/SC 12/WG 4)"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/value",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#DatatypeProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ArgonFlowRate"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/Filter"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESView"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/SampleFlowRate"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/TestPieceName"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/Volume"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/dilutionFactor"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/Date"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/NodeSerialNumber"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/NodeSeries"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/TestPieceInfo"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/ValueObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "value"
+      },
+      {
+        "@language": "de",
+        "@value": "hat Wert"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#float"
+      },
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      {
+        "@id": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      {
+        "@id": "http://www.w3.org/2000/01/rdf-schema#Literal"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#topDataProperty"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Provides the actual value a value object is referring to."
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/Filter",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Filter"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/ProcessingNode"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "a porous device for removing impurities or solid particles from a liquid or gas passed through it."
+      }
+    ],
+    "https://w3id.org/pmd/co/unit": [
+      {
+        "@id": "http://qudt.org/2.1/vocab/unit#MicroM"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/Process",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://purl.obolibrary.org/obo/IAO_0000117": [
+      {
+        "@language": "en",
+        "@value": "A process is an activity comprising a series of actions or operations conducing to an end. In PMD, a process is conducted via processing nodes and has a discernable duration as part of a workflow. A process consumes objects and parameters. A process potentially generates new objects and measurements."
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Process"
+      },
+      {
+        "@language": "de",
+        "@value": "Prozess"
+      },
+      {
+        "@language": "en",
+        "@value": "Process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Activity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A process is an activity including a series of actions or operations conducing to an end. In PMD, a process is conducted via processing nodes and has a discernable duration as part of a workflow. A process consumes objects and parameters. A process potentially generates new objects and measurements."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/NodeSerialNumber",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "NodeSerialNumber"
+      },
+      {
+        "@language": "en",
+        "@value": "Node Serial Number"
+      },
+      {
+        "@language": "de",
+        "@value": "Knoten-Seriennummer"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/ProvidedIdentifier"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/NodeInfo"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A unique identifier of a processing node, typically provided by the manufacturer (manufacturer serial number,  s/n)."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/Duration",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Duration"
+      },
+      {
+        "@language": "en",
+        "@value": "Duration"
+      },
+      {
+        "@language": "de",
+        "@value": "Dauer"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/Time"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "de",
+        "@value": "Eine Zeitspanne mit einer eigenen Zeitskala und einer in einer anderen Zeitskala verankerten Epoche. Eine Dauer kann durch einen einzigen Wert ausgedrückt werden, da sie die Zeitdifferenz zwischen zwei Zeitpunkten darstellt, z. B. die Differenz zwischen Endzeit und Startzeit oder die Differenz zwischen der aktuellen, momentanen Zeit und der Startzeit."
+      },
+      {
+        "@language": "en",
+        "@value": "A period of time with its own timescale and an epoch anchored in another timescale. A duration can be expressed via a single value as it represents the time difference between two points in time, e.g. the difference between EndTime and StartTime or the difference between the current, momentary time and the StartTime."
+      }
+    ],
+    "https://w3id.org/pmd/co/unit": [
+      {
+        "@id": "http://qudt.org/2.1/vocab/unit#s"
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/FilteringProcess",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "FilteringProcess"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/Process"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Process of filtering"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/Dataset",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Dataset"
+      },
+      {
+        "@language": "de",
+        "@value": "Datensatz"
+      },
+      {
+        "@language": "en",
+        "@value": "Dataset"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/DigitalEntity"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A collection of data published in one or more files. Usually instances of this class are also instances of DCAT dataset (see https://www.w3.org/TR/vocab-dcat-2/)."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/Specimen",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Specimen"
+      },
+      {
+        "@language": "de",
+        "@value": "Prüfling"
+      },
+      {
+        "@language": "en",
+        "@value": "Specimen"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/Sample"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/pmd/co/TestPiece"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "An object designed for a specific analysis."
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/Ontology",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Ontology"
+    ],
+    "http://purl.org/dc/terms/creator": [
+      {
+        "@value": "Alexander C. Harding Bradley"
+      },
+      {
+        "@value": "Balashanmuga Priyan Rajamohan"
+      },
+      {
+        "@value": "Daniel Struk"
+      },
+      {
+        "@value": "Erika I. Barcelos"
+      },
+      {
+        "@value": "Hayden Caldwell"
+      },
+      {
+        "@value": "Jiana Kanbo"
+      },
+      {
+        "@value": "Kiefer Lin"
+      },
+      {
+        "@value": "Peter J. Hesketh"
+      },
+      {
+        "@value": "Roger H. French"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@value": "An ontology describing the Inductively coupled plasma-optical emission spectrometry domain."
+      }
+    ],
+    "http://purl.org/dc/terms/hasVersion": [
+      {
+        "@value": "0.2"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@value": "ICPOESOntology"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ICPOESOntology"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/ValueObject",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ValueObject"
+      },
+      {
+        "@language": "en",
+        "@value": "Value Object"
+      },
+      {
+        "@language": "de",
+        "@value": "Wertobjekt"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Entity"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n99b2e614335c4dda8bc9514789bf95ccb103"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.\n\nA value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\\"quality\\\", or the :participant (:input,:output) if it is participating a process.\n\nA value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).\n\nInstances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).\n\nInstances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#example": [
+      {
+        "@language": "en",
+        "@value": "The length of a specimen, which has been measured as primary data. Its actual value is 123.45 millimeters."
+      },
+      {
+        "@language": "en",
+        "@value": "- the length of a specimen\n- the model number of a machine\n- a person involved in a process\n- a force on an object"
+      },
+      {
+        "@language": "en",
+        "@value": ":Length rdfs:subClass :ValueObject .\nex:vo1 a :Length .\nex:vo1 a :Measurement .\nex:vo1 a :PrimaryData .\nex:vo1 :unit qudt:MilliM . \nex:vo1 :value \"123.45\"\nex:p1 a :LengthMeasuringProcess .\nex:p1 :characteristic ex:vo1 ."
+      }
+    ]
+  },
+  {
+    "@id": "_:n99b2e614335c4dda8bc9514789bf95ccb103"
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/Date",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Date"
+      },
+      {
+        "@language": "de",
+        "@value": "Datum"
+      },
+      {
+        "@language": "en",
+        "@value": "Date"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/Time"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A statement of the day of execution or making. Based on an the gregorian calender system."
+      },
+      {
+        "@language": "de",
+        "@value": "Eine Erklärung über den Tag der Ausführung oder Herstellung. Basierend auf dem gregorianischen Kalendersystem."
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/dilutionFactor",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "dilutionFactor"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/SetPoint"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Factor of dilution"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/ProcessingNode",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ProcessingNode"
+      },
+      {
+        "@language": "de",
+        "@value": "Prozessknoten"
+      },
+      {
+        "@language": "en",
+        "@value": "Processing Node"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Agent"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Processing nodes are tools, equipment and accessories as well as software that are relevant for the performance of processes, such as e.g. mechanical and chemical test as well as simulation, prediction, and machine learning. Accordingly, processing nodes may be machines, parts of machines, and software applications."
+      },
+      {
+        "@language": "de",
+        "@value": "Prozessknoten sind Werkzeuge, Geräte und Zubehör sowie Software, die für die Durchführung von Prozessen relevant sind, wie z. B. mechanische und chemische Tests sowie Simulationen, Vorhersagen und maschinelles Lernen. Dementsprechend können Prozessknoten Maschinen, Teile von Maschinen und Softwareanwendungen sein."
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/SpectometryMeasuringProcess",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "SpectometryMeasuringProcess"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/MeasuringProcess"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "The process by which you can measure the concentration of elements in a certain sample"
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/Spectrometer",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Spectrometer"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESTestingMachine"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "A scientific instrument used to separate and measure spectral components of a physical phenomenon"
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESView",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ICPOESView"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/ValueObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "The configuration of the ICPOES machine (radial or axial)"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/Identifier",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Identifier"
+      },
+      {
+        "@language": "de",
+        "@value": "Identifikator"
+      },
+      {
+        "@language": "en",
+        "@value": "Identifier"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/ValueObject"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A named value intended to distinguish between entities."
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/TestPieceName",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "TestPieceName"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/Identifier"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Name of test piece for ICPOES experiment"
+      }
+    ]
+  },
+  {
+    "@id": "https://www.w3.org/TR/2014/REC-rdf-schema-20140225/_1",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://www.w3.org/TR/2014/REC-rdf-schema-20140225/Bag"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "http://purl.obolibrary.org/obo/CHEBI_24431"
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/dilutionProcess",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "dilutionProcess"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/Process"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Process of diluting"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/TestingMachine",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "TestingMachine"
+      },
+      {
+        "@language": "en",
+        "@value": "Testing Machine"
+      },
+      {
+        "@language": "de",
+        "@value": "Prüfmaschine"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/ProcessingNode"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "de",
+        "@value": "Diese Entität beschreibt einen Prozessknoten, der für die Durchführung eines bestimmten Tests verwendet wird. Eine Prüfmaschine kann technisch komplex sein und aus mehreren Teilen bestehen."
+      },
+      {
+        "@language": "en",
+        "@value": "This entity describes a processing node that is used to perform a defined test. A testing machine may be technically complex and contain several parts."
+      }
+    ]
+  },
+  {
+    "@id": "http://purl.obolibrary.org/obo/CHEBI_24431",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "CHEBI_24431"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/nextProcess",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESSamplePrepProcess"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/Process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "next process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESProcess"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/Process"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#wasInformedBy"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/previousProcess"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "has next process"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "This property is used to indicate the process that was run after the current process."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/NonTransformativeAnalysisProcess",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "NonTransformativeAnalysisProcess"
+      },
+      {
+        "@language": "en",
+        "@value": "Non Transformative Analysis Process"
+      },
+      {
+        "@language": "de",
+        "@value": "Nicht-transformativer Analyseprozess"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/AnalysingProcess"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#disjointWith": [
+      {
+        "@id": "https://w3id.org/pmd/co/TransformativeAnalysisProcess"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "An analysis process that is non-transformative."
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/SetPoint",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "SetPoint"
+      },
+      {
+        "@language": "de",
+        "@value": "Sollwert"
+      },
+      {
+        "@language": "en",
+        "@value": "Set Point"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/ValueScope"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "This value scope expresses that a :ValueObject is the desired or target value for an essential variable, or process value (PV) of a control system."
+      },
+      {
+        "@language": "de",
+        "@value": "Sollwert bezeichnet allgemein den angestrebten Wert eines quantitativen Merkmales eines Systems, von dem der tatsächliche Istwert so wenig wie möglich abweichen soll. Der Sollwert wird von einem anderen System (z. B. Technik, Mensch) vorgegeben."
+      },
+      {
+        "@language": "en",
+        "@value": "The ValueScope Setpoint generally refers to the desired value of a quantitative characteristic of a system, from which the actual value should deviate as little as possible."
+      },
+      {
+        "@language": "de",
+        "@value": "Die Wertekategorie Sollwert bezeichnet allgemein den gewünschten Wert eines quantitativen Merkmals eines Systems, von dem der Istwert möglichst wenig abweichen soll."
+      }
+    ],
+    "https://w3id.org/pmd/co/definitionSource": [
+      {
+        "@language": "de",
+        "@value": "https://de.wikipedia.org/wiki/Sollwert"
+      },
+      {
+        "@language": "en",
+        "@value": "https://en.wikipedia.org/wiki/Setpoint_(control_system)"
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESSamplePrepProcess",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ICPOESSamplePrepProcess"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/Process"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "Process of preparing a sample for an ICPOES Experiment"
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESTestingMachine",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ICPOESTestingMachine"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/TestingMachine"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "A testing machine used in an ICPOES experiment"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/characteristic",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#ObjectProperty"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#domain": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/FilteringProcess"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESProcess"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/Spectrometer"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/dilutionProcess"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/Specimen"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/TestPiece"
+      },
+      {
+        "@id": "_:n99b2e614335c4dda8bc9514789bf95ccb1"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@language": "en",
+        "@value": "characteristic"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#range": [
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ArgonFlowRate"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/Filter"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ICPOESView"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/SampleFlowRate"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/TestPieceName"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/Volume"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/dilutionFactor"
+      },
+      {
+        "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/isCalibrationSample"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/Date"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/Duration"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/Laboratory"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/NodeSerialNumber"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/NodeSeries"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/TestPieceInfo"
+      },
+      {
+        "@id": "https://www.w3.org/TR/2014/REC-rdf-schema-20140225/Bag"
+      },
+      {
+        "@id": "https://w3id.org/pmd/co/ValueObject"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf": [
+      {
+        "@id": "http://www.w3.org/2002/07/owl#topObjectProperty"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#inverseOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/characteristicOf"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "en",
+        "@value": "has characteristic"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "de",
+        "@value": "Die Objekteigenschaft characterisitc, wird in Verbindung mit ProzessKnoten, Prozess und Objekt verwendet und dient zur Herstellung einer Verbindung mit dem WerteObjekt. Diese Eigenschaft ermöglicht die Abbildung von Beziehungen zwischen ProzessKnoten, Prozessen und Objekten und den dazugehörigen Werten oder Attributen (Metadaten), die in WerteObjekt ausgedrückt sind."
+      },
+      {
+        "@language": "en",
+        "@value": "The object property characteristic, in conjunction with ProcessingNode, Process and Object, is used to establish a connection with ValueObjects. This property enables the representation of relationships between ProcessingNodes, Processes and Objects and the associated values or attributes (metadata) that are stored in ValueObjects."
+      }
+    ]
+  },
+  {
+    "@id": "_:n99b2e614335c4dda8bc9514789bf95ccb1"
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/NodeSeries",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "NodeSeries"
+      },
+      {
+        "@language": "en",
+        "@value": "Node Series"
+      },
+      {
+        "@language": "de",
+        "@value": "Serie"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/NodeInfo"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#altLabel": [
+      {
+        "@language": "de",
+        "@value": "Knotentyp"
+      },
+      {
+        "@language": "en",
+        "@value": "Node Type"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "Processing Node typename, e.g. \"ProTherm500\""
+      }
+    ]
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/ArgonFlowRate",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "ArgonFlowRate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/TestingRate"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "The flow rate of argon in the ICPOES machine"
+      }
+    ],
+    "https://w3id.org/pmd/co/unit": [
+      {
+        "@id": "http://qudt.org/2.1/vocab/unit#L-PER-MIN"
+      }
+    ]
+  },
+  {
+    "@id": "https://w3id.org/pmd/co/Laboratory",
+    "@type": [
+      "http://www.w3.org/2002/07/owl#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#isDefinedBy": [
+      {
+        "@id": "https://w3id.org/pmd/co"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "Laboratory"
+      },
+      {
+        "@language": "de",
+        "@value": "Labor"
+      },
+      {
+        "@language": "en",
+        "@value": "Laboratory"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "http://www.w3.org/ns/prov#Organization"
+      }
+    ],
+    "http://www.w3.org/2002/07/owl#equivalentClass": [
+      {
+        "@id": "_:n99b2e614335c4dda8bc9514789bf95ccb58"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@language": "en",
+        "@value": "A place equipped for experimental study in a science or for testing and analysis."
+      }
+    ],
+    "https://w3id.org/pmd/co/definitionSource": [
+      {
+        "@language": "en",
+        "@value": "“Laboratory.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/laboratory. Accessed 24 Nov. 2022."
+      }
+    ]
+  },
+  {
+    "@id": "_:n99b2e614335c4dda8bc9514789bf95ccb58"
+  },
+  {
+    "@id": "https://cwrusdle.bitbucket.io/ICPOESOntology/SampleFlowRate",
+    "@type": [
+      "http://www.w3.org/2000/01/rdf-schema#Class"
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#label": [
+      {
+        "@value": "SampleFlowRate"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#subClassOf": [
+      {
+        "@id": "https://w3id.org/pmd/co/TestingRate"
+      }
+    ],
+    "http://www.w3.org/2004/02/skos/core#definition": [
+      {
+        "@value": "The flow rate of the sample in the ICPOES machine"
+      }
+    ],
+    "https://w3id.org/pmd/co/unit": [
+      {
+        "@id": "http://qudt.org/2.1/vocab/unit#MilliL-PER-MIN"
+      }
+    ]
+  }
+]

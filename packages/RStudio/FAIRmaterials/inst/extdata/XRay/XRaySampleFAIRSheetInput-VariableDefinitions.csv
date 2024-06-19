@@ -1,0 +1,17 @@
+Variable Name,Belongs to Ontology,Parent Variable,Definition of Variable,Alternative Name(s),Unit,Logical Axioms,fullName
+The variable that you would like to represent in your ontology schema.,"If the variable exists in an ontology below, select the ontology from the dropdown menu. Otherwise, please leave blank.","Please type the variable from the Parent Ontology that you would like to connect your variable to. If the variable is already in a selected ontology, please leave blank.","Please provide the definition the variable. For reccomendation on a definition, search the term in https://schema.org. If the variable is already in a selected ontology, please leave blank.","Please provide any alternative names for the variable in the literature. If the variable is already in a selected ontology, please leave blank
+*Optional*","Please provide the unit that the variable is expressed in your data. For a dictionary of standardized units, please visit https://qudt.org. If the variable is already in a selected ontology, please leave blank
+*Optional*","Please provide any logic you would like to attach to your variable. For information and examples on logical axioms, please visit https://www.w3.org/TR/daml+oil-axioms/ If the variable is already in a selected ontology, please leave blank.
+*Optional*",
+Sample,pmd,,,,,,pmd:Sample
+SpecimenName,pmd,,,,,,pmd:SpecimenName
+SampleID,,pmd:SpecimenName,A human-labeled sample identifier.,,,,SampleID
+ManufacturingProcess,pmd,,,,,,pmd:ManufacturingProcess
+ProcessingMethod,,pmd:ManufacturingProcess,The manufacturing method by ehich the sample was created.,,,,ProcessingMethod
+MaterialDesignation,pmd,,,,,,pmd:MaterialDesignation
+MaterialName,,pmd:MaterialDesignation,Name of the material.,,,,MaterialName
+Length,pmd,,Length of the sample.,,qudt:MilliM,,pmd:Length
+Width,pmd,,Width of the sample.,,qudt:MilliM,,pmd:Width
+Thickness,pmd,,Thickness of the sample.,,qudt:MilliM,,pmd:Thickness
+XraySample,,pmd:Sample,,,,,XraySample
+XrayTool,,,,,,,XrayTool

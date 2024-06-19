@@ -1,0 +1,205 @@
+{
+  "@graph": [
+    {
+      "@id": "https://cwrusdle.bitbucket.io/xraySample#MaterialName",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": "MaterialName",
+      "http://www.w3.org/2000/01/rdf-schema#comment": "Name of the material.",
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
+        "@id": "https://w3id.org/pmd/co/MaterialDesignation"
+      },
+      "http://www.w3.org/2004/02/skos/core#altLabel": "_",
+      "https://w3id.org/pmd/co#unit": "_"
+    },
+    {
+      "@id": "https://cwrusdle.bitbucket.io/xraySample#Ontology",
+      "@type": "http://www.w3.org/2002/07/owl#Ontology",
+      "http://purl.org/dc/terms/creator": "Alexander C. Harding Bradley, Balashanmuga Priyan Rajamohan, \nMohommad Redad Mehdi, Weiqi Yue, Finley Holt, Pawan K. Tripathi, \n Erika I. Barcelos, Matthew Willard, Frank Ernst, Roger H. French",
+      "http://purl.org/dc/terms/description": "XRD Sample Ontology for the FAST Beamline at CHESS.",
+      "http://purl.org/dc/terms/title": "mds-XraySample",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": {
+        "@id": "https://cwrusdle.bitbucket.io/xraySample#"
+      },
+      "http://www.w3.org/2002/07/owl#versionInfo": "0.2"
+    },
+    {
+      "@id": "https://cwrusdle.bitbucket.io/xraySample#ProcessingMethod",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": "ProcessingMethod",
+      "http://www.w3.org/2000/01/rdf-schema#comment": "The manufacturing method by ehich the sample was created.",
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
+        "@id": "https://w3id.org/pmd/co/ManufacturingProcess"
+      },
+      "http://www.w3.org/2004/02/skos/core#altLabel": "_",
+      "https://w3id.org/pmd/co#unit": "_"
+    },
+    {
+      "@id": "https://cwrusdle.bitbucket.io/xraySample#SampleID",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": "SampleID",
+      "http://www.w3.org/2000/01/rdf-schema#comment": "A human-labeled sample identifier.",
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
+        "@id": "https://w3id.org/pmd/co/SpecimenName"
+      },
+      "http://www.w3.org/2004/02/skos/core#altLabel": "_",
+      "https://w3id.org/pmd/co#unit": "_"
+    },
+    {
+      "@id": "https://cwrusdle.bitbucket.io/xraySample#XraySample",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": "XraySample",
+      "http://www.w3.org/2000/01/rdf-schema#comment": "_",
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
+        "@id": "https://w3id.org/pmd/co/Sample"
+      },
+      "http://www.w3.org/2004/02/skos/core#altLabel": "_",
+      "https://w3id.org/pmd/co#unit": "_"
+    },
+    {
+      "@id": "https://cwrusdle.bitbucket.io/xraySample#XrayTool",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": "XrayTool",
+      "http://www.w3.org/2000/01/rdf-schema#comment": "_",
+      "http://www.w3.org/2004/02/skos/core#altLabel": "_",
+      "https://w3id.org/pmd/co#unit": "_"
+    },
+    {
+      "@id": "https://cwrusdle.bitbucket.io/xraySample#inputOf",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2000/01/rdf-schema#domain": {
+        "@id": "https://cwrusdle.bitbucket.io/xraySample#XraySample"
+      },
+      "http://www.w3.org/2000/01/rdf-schema#range": {
+        "@id": "https://cwrusdle.bitbucket.io/xraySample#XrayTool"
+      }
+    },
+    {
+      "@id": "https://w3id.org/pmd/co/Length",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": "Length",
+      "http://www.w3.org/2000/01/rdf-schema#comment": "Length of the sample.",
+      "http://www.w3.org/2004/02/skos/core#altLabel": "_",
+      "https://w3id.org/pmd/co#unit": {
+        "@id": "http://qudt.org/2.1/vocab/unit#MilliM"
+      }
+    },
+    {
+      "@id": "https://w3id.org/pmd/co/ManufacturingProcess",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": "ManufacturingProcess",
+      "http://www.w3.org/2000/01/rdf-schema#comment": "_",
+      "http://www.w3.org/2004/02/skos/core#altLabel": "_",
+      "https://w3id.org/pmd/co#unit": "_"
+    },
+    {
+      "@id": "https://w3id.org/pmd/co/MaterialDesignation",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": "MaterialDesignation",
+      "http://www.w3.org/2000/01/rdf-schema#comment": "_",
+      "http://www.w3.org/2004/02/skos/core#altLabel": "_",
+      "https://w3id.org/pmd/co#unit": "_"
+    },
+    {
+      "@id": "https://w3id.org/pmd/co/Sample",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": "Sample",
+      "http://www.w3.org/2000/01/rdf-schema#comment": "_",
+      "http://www.w3.org/2004/02/skos/core#altLabel": "_",
+      "https://w3id.org/pmd/co#unit": "_"
+    },
+    {
+      "@id": "https://w3id.org/pmd/co/SpecimenName",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": "SpecimenName",
+      "http://www.w3.org/2000/01/rdf-schema#comment": "_",
+      "http://www.w3.org/2004/02/skos/core#altLabel": "_",
+      "https://w3id.org/pmd/co#unit": "_"
+    },
+    {
+      "@id": "https://w3id.org/pmd/co/Thickness",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": "Thickness",
+      "http://www.w3.org/2000/01/rdf-schema#comment": "Thickness of the sample.",
+      "http://www.w3.org/2004/02/skos/core#altLabel": "_",
+      "https://w3id.org/pmd/co#unit": {
+        "@id": "http://qudt.org/2.1/vocab/unit#MilliM"
+      }
+    },
+    {
+      "@id": "https://w3id.org/pmd/co/Width",
+      "@type": "http://www.w3.org/2000/01/rdf-schema#Class",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#label": "Width",
+      "http://www.w3.org/2000/01/rdf-schema#comment": "Width of the sample.",
+      "http://www.w3.org/2004/02/skos/core#altLabel": "_",
+      "https://w3id.org/pmd/co#unit": {
+        "@id": "http://qudt.org/2.1/vocab/unit#MilliM"
+      }
+    },
+    {
+      "@id": "https://w3id.org/pmd/co/characteristicOf",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2000/01/rdf-schema#domain": {
+        "@id": "https://cwrusdle.bitbucket.io/xraySample#XraySample"
+      },
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "https://w3id.org/pmd/co/Thickness"
+        },
+        {
+          "@id": "https://w3id.org/pmd/co/Width"
+        },
+        {
+          "@id": "https://w3id.org/pmd/co/Length"
+        },
+        {
+          "@id": "https://cwrusdle.bitbucket.io/xraySample#MaterialName"
+        },
+        {
+          "@id": "https://cwrusdle.bitbucket.io/xraySample#ProcessingMethod"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/pmd/co/hasIdentifier",
+      "@type": "http://www.w3.org/2002/07/owl#ObjectProperty",
+      "http://www.w3.org/2000/01/rdf-schema#domain": {
+        "@id": "https://cwrusdle.bitbucket.io/xraySample#XraySample"
+      },
+      "http://www.w3.org/2000/01/rdf-schema#range": {
+        "@id": "https://cwrusdle.bitbucket.io/xraySample#SampleID"
+      }
+    },
+    {
+      "@id": "https://w3id.org/pmd/co/value",
+      "@type": "http://www.w3.org/2002/07/owl#DatatypeProperty",
+      "http://www.w3.org/2000/01/rdf-schema#domain": [
+        {
+          "@id": "https://w3id.org/pmd/co/Thickness"
+        },
+        {
+          "@id": "https://w3id.org/pmd/co/Width"
+        },
+        {
+          "@id": "https://w3id.org/pmd/co/Length"
+        },
+        {
+          "@id": "https://cwrusdle.bitbucket.io/xraySample#MaterialName"
+        },
+        {
+          "@id": "https://cwrusdle.bitbucket.io/xraySample#ProcessingMethod"
+        },
+        {
+          "@id": "https://cwrusdle.bitbucket.io/xraySample#SampleID"
+        }
+      ],
+      "http://www.w3.org/2000/01/rdf-schema#range": [
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#float"
+        },
+        {
+          "@id": "http://www.w3.org/2001/XMLSchema#string"
+        }
+      ]
+    }
+  ]
+}

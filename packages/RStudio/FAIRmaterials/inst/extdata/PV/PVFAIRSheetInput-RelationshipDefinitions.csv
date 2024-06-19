@@ -1,0 +1,22 @@
+Relationship Name,Belongs to Ontology,Domain,Range,Definition,Logical Axioms,Alternative Name(s),fullName
+The name of the relationship between two terms that you would like to use in your ontology schema.,"If the relationship already exists in an ontology below, select the ontology from the dropdown menu. Otherwise, please leave blank.","Please enter the term that the relationship starts from. (Example: If you would like to define the relationship that a tool term ""outputs"" an image term, select the tool term).","Please enter the term that the relationship goes to. Example: If you would like to define the relationship that a tool term ""outputs"" an image, select the image variable.","Please provide the definition the relationship. For reccomendation on a definition, search the term in https://schema.org. If the term is already in a selected ontology, please leave blank.","Please provide any logic you would like to attach to your term. For information and examples on logical axioms, please visit https://www.w3.org/TR/daml+oil-axioms/ 
+*Optional*","Please provide any alternative names for the relationship in the literature.
+*Optional*",
+characteristic,PMDCo,ProdModule,PMDCo:NodeSerialNumber,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdModule,PMDCo:Manufacturer,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdModule,CellCount,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdModule,FrameColor,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdModule,ModuleEfficiency,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdModule,FluorescencePattern,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdModule,PowerSTC,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdModule,TemperatureNOCT,,,,PMDCo:characteristic
+component,PMDCo,ProdModule,ProdBacksheet,,,,PMDCo:component
+component,PMDCo,ProdModule,ProdEncapsulant,,,,PMDCo:component
+component,PMDCo,ProdModule,ProdJunctionBox,,,,PMDCo:component
+characteristic,PMDCo,ProdBacksheet,BacksheetColor,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdBacksheet,BacksheetMaterial,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdEncapsulant,EncapsulantMaterial,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdEncapsulant,PMDCo:Length,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdEncapsulant,PMDCo:Width,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdEncapsulant,PMDCo:Thickness,,,,PMDCo:characteristic
+characteristic,PMDCo,ProdEncapsulant,PMDCo:Weight,,,,PMDCo:characteristic

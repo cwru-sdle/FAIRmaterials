@@ -1,0 +1,434 @@
+@prefix CheBI: <http://purl.obolibrary.org/obo/> .
+@prefix ICPOESOntology: <https://cwrusdle.bitbucket.io/ICPOESOntology/> .
+@prefix PMDCo: <https://w3id.org/pmd/co/> .
+@prefix QUDT: <http://qudt.org/2.1/vocab/unit#> .
+@prefix RDF: <https://www.w3.org/TR/2014/REC-rdf-schema-20140225/> .
+@prefix ns1: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns2: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+CheBI:CHEBI_24431 a rdfs:Class ;
+    rdfs:label "CHEBI_24431" .
+
+ICPOESOntology:ArgonFlowRate a rdfs:Class ;
+    rdfs:label "ArgonFlowRate" ;
+    rdfs:subClassOf PMDCo:TestingRate ;
+    ns1:definition "The flow rate of argon in the ICPOES machine" ;
+    PMDCo:unit QUDT:L-PER-MIN .
+
+ICPOESOntology:Filter a rdfs:Class ;
+    rdfs:label "Filter" ;
+    rdfs:subClassOf PMDCo:ProcessingNode ;
+    ns1:definition "a porous device for removing impurities or solid particles from a liquid or gas passed through it." ;
+    PMDCo:unit QUDT:MicroM .
+
+ICPOESOntology:FilteringProcess a rdfs:Class ;
+    rdfs:label "FilteringProcess" ;
+    rdfs:subClassOf PMDCo:Process ;
+    ns1:definition "Process of filtering" .
+
+ICPOESOntology:ICPOESProcess a rdfs:Class ;
+    rdfs:label "ICPOESProcess" ;
+    rdfs:subClassOf ICPOESOntology:SpectometryMeasuringProcess ;
+    ns1:definition "A process related to ICPOES" .
+
+ICPOESOntology:ICPOESSamplePrepProcess a rdfs:Class ;
+    rdfs:label "ICPOESSamplePrepProcess" ;
+    rdfs:subClassOf PMDCo:Process ;
+    ns1:definition "Process of preparing a sample for an ICPOES Experiment" .
+
+ICPOESOntology:ICPOESTestingMachine a rdfs:Class ;
+    rdfs:label "ICPOESTestingMachine" ;
+    rdfs:subClassOf PMDCo:TestingMachine ;
+    ns1:definition "A testing machine used in an ICPOES experiment" .
+
+ICPOESOntology:ICPOESView a rdfs:Class ;
+    rdfs:label "ICPOESView" ;
+    rdfs:subClassOf PMDCo:ValueObject ;
+    ns1:definition "The configuration of the ICPOES machine (radial or axial)" .
+
+ICPOESOntology:SampleFlowRate a rdfs:Class ;
+    rdfs:label "SampleFlowRate" ;
+    rdfs:subClassOf PMDCo:TestingRate ;
+    ns1:definition "The flow rate of the sample in the ICPOES machine" ;
+    PMDCo:unit QUDT:MilliL-PER-MIN .
+
+ICPOESOntology:SpectometryMeasuringProcess a rdfs:Class ;
+    rdfs:label "SpectometryMeasuringProcess" ;
+    rdfs:subClassOf PMDCo:MeasuringProcess ;
+    ns1:definition "The process by which you can measure the concentration of elements in a certain sample" .
+
+ICPOESOntology:Spectrometer a rdfs:Class ;
+    rdfs:label "Spectrometer" ;
+    rdfs:subClassOf ICPOESOntology:ICPOESTestingMachine ;
+    ns1:definition "A scientific instrument used to separate and measure spectral components of a physical phenomenon" .
+
+ICPOESOntology:TestPieceName a rdfs:Class ;
+    rdfs:label "TestPieceName" ;
+    rdfs:subClassOf PMDCo:Identifier ;
+    ns1:definition "Name of test piece for ICPOES experiment" .
+
+ICPOESOntology:Volume a rdfs:Class ;
+    rdfs:label "Volume" ;
+    rdfs:subClassOf PMDCo:ValueObject ;
+    ns1:definition "the amount of space that a substance or object occupies" ;
+    PMDCo:unit QUDT:MilliL .
+
+ICPOESOntology:dilutionFactor a rdfs:Class ;
+    rdfs:label "dilutionFactor" ;
+    rdfs:subClassOf PMDCo:SetPoint ;
+    ns1:definition "Factor of dilution" .
+
+ICPOESOntology:dilutionProcess a rdfs:Class ;
+    rdfs:label "dilutionProcess" ;
+    rdfs:subClassOf PMDCo:Process ;
+    ns1:definition "Process of diluting" .
+
+ICPOESOntology:isCalibrationSample a rdfs:Class ;
+    rdfs:label "isCalibrationSample" ;
+    rdfs:subClassOf PMDCo:ValueObject ;
+    ns1:definition "Boolean value corresponding to whether the sample is for calibration of ICPOES machine" .
+
+RDF:Bag a rdfs:Class ;
+    rdfs:label "Bag" .
+
+ICPOESOntology:Ontology a owl:Ontology ;
+    rdfs:label "ICPOESOntology" ;
+    ns2:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Daniel Struk",
+        "Erika I. Barcelos",
+        "Hayden Caldwell",
+        "Jiana Kanbo",
+        "Kiefer Lin",
+        "Peter J. Hesketh",
+        "Roger H. French" ;
+    ns2:description "An ontology describing the Inductively coupled plasma-optical emission spectrometry domain." ;
+    ns2:hasVersion "0.2" ;
+    ns2:title "ICPOESOntology" .
+
+PMDCo:characteristic a owl:ObjectProperty ;
+    rdfs:label "characteristic"@en ;
+    rdfs:domain [ ],
+        ICPOESOntology:FilteringProcess,
+        ICPOESOntology:ICPOESProcess,
+        ICPOESOntology:Spectrometer,
+        ICPOESOntology:dilutionProcess,
+        PMDCo:Specimen,
+        PMDCo:TestPiece ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:range ICPOESOntology:ArgonFlowRate,
+        ICPOESOntology:Filter,
+        ICPOESOntology:ICPOESView,
+        ICPOESOntology:SampleFlowRate,
+        ICPOESOntology:TestPieceName,
+        ICPOESOntology:Volume,
+        ICPOESOntology:dilutionFactor,
+        ICPOESOntology:isCalibrationSample,
+        PMDCo:Date,
+        PMDCo:Duration,
+        PMDCo:Laboratory,
+        PMDCo:NodeSerialNumber,
+        PMDCo:NodeSeries,
+        PMDCo:TestPieceInfo,
+        PMDCo:ValueObject,
+        RDF:Bag ;
+    rdfs:subPropertyOf owl:topObjectProperty ;
+    owl:inverseOf PMDCo:characteristicOf ;
+    ns1:altLabel "has characteristic"@en ;
+    ns1:definition "Die Objekteigenschaft characterisitc, wird in Verbindung mit ProzessKnoten, Prozess und Objekt verwendet und dient zur Herstellung einer Verbindung mit dem WerteObjekt. Diese Eigenschaft ermöglicht die Abbildung von Beziehungen zwischen ProzessKnoten, Prozessen und Objekten und den dazugehörigen Werten oder Attributen (Metadaten), die in WerteObjekt ausgedrückt sind."@de,
+        "The object property characteristic, in conjunction with ProcessingNode, Process and Object, is used to establish a connection with ValueObjects. This property enables the representation of relationships between ProcessingNodes, Processes and Objects and the associated values or attributes (metadata) that are stored in ValueObjects."@en .
+
+PMDCo:executedBy a owl:ObjectProperty ;
+    rdfs:label "executed by"@en ;
+    rdfs:domain ICPOESOntology:ICPOESProcess,
+        PMDCo:Process ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:range ICPOESOntology:Spectrometer,
+        PMDCo:ProcessingNode ;
+    rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasAssociatedWith> ;
+    owl:inverseOf PMDCo:executes ;
+    ns1:definition "This property represents which process is executed by which process node."@en .
+
+PMDCo:input a owl:ObjectProperty ;
+    rdfs:label "input"@en ;
+    rdfs:domain ICPOESOntology:ICPOESProcess,
+        ICPOESOntology:ICPOESSamplePrepProcess,
+        PMDCo:NonTransformativeAnalysisProcess ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:range PMDCo:Dataset,
+        PMDCo:Specimen,
+        PMDCo:TestPiece ;
+    rdfs:subPropertyOf <http://www.w3.org/ns/prov#used>,
+        PMDCo:participant ;
+    owl:inverseOf PMDCo:inputOf ;
+    ns1:altLabel "has input" ;
+    ns1:definition "This property is used to link the processes to their input objects."@en .
+
+PMDCo:nextProcess a owl:ObjectProperty ;
+    rdfs:label "next process"@en ;
+    rdfs:domain ICPOESOntology:ICPOESSamplePrepProcess,
+        PMDCo:Process ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:range ICPOESOntology:ICPOESProcess,
+        PMDCo:Process ;
+    rdfs:subPropertyOf <http://www.w3.org/ns/prov#wasInformedBy> ;
+    owl:inverseOf PMDCo:previousProcess ;
+    ns1:altLabel "has next process"@en ;
+    ns1:definition "This property is used to indicate the process that was run after the current process."@en .
+
+PMDCo:output a owl:ObjectProperty ;
+    rdfs:label "output"@en ;
+    rdfs:domain ICPOESOntology:ICPOESSamplePrepProcess,
+        ICPOESOntology:Spectrometer,
+        PMDCo:NonTransformativeAnalysisProcess ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:range PMDCo:Dataset,
+        PMDCo:TestPiece ;
+    rdfs:subPropertyOf <http://www.w3.org/ns/prov#generated>,
+        PMDCo:participant ;
+    owl:inverseOf PMDCo:outputOf ;
+    ns1:altLabel "has output" ;
+    ns1:definition "This property is used to link the processes to their output objects"@en .
+
+PMDCo:resource a owl:DatatypeProperty,
+        owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "resource"@en ;
+    rdfs:domain ICPOESOntology:ArgonFlowRate,
+        PMDCo:ValueObject ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:range xsd:string ;
+    ns1:altLabel "has resource"@en .
+
+PMDCo:subordinateProcess a owl:ObjectProperty ;
+    rdfs:label "subordinate process"@en ;
+    rdfs:domain ICPOESOntology:ICPOESSamplePrepProcess,
+        PMDCo:Process ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:range ICPOESOntology:FilteringProcess,
+        ICPOESOntology:dilutionProcess,
+        PMDCo:Process ;
+    owl:inverseOf PMDCo:superordinateProcess ;
+    ns1:altLabel "has subordinate process" ;
+    ns1:definition "This property is used to link a process to its subordinate processes."@en .
+
+PMDCo:value a owl:DatatypeProperty ;
+    rdfs:label "hat Wert"@de,
+        "value"@en ;
+    rdfs:domain ICPOESOntology:ArgonFlowRate,
+        ICPOESOntology:Filter,
+        ICPOESOntology:ICPOESView,
+        ICPOESOntology:SampleFlowRate,
+        ICPOESOntology:TestPieceName,
+        ICPOESOntology:Volume,
+        ICPOESOntology:dilutionFactor,
+        PMDCo:Date,
+        PMDCo:NodeSerialNumber,
+        PMDCo:NodeSeries,
+        PMDCo:TestPieceInfo,
+        PMDCo:ValueObject ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:range rdfs:Literal,
+        xsd:dateTime,
+        xsd:float,
+        xsd:integer,
+        xsd:string ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    ns1:definition "Provides the actual value a value object is referring to."@en .
+
+RDF:_1 a owl:ObjectProperty ;
+    rdfs:domain RDF:Bag ;
+    rdfs:range CheBI:CHEBI_24431 .
+
+PMDCo:Duration a owl:Class ;
+    rdfs:label "Duration",
+        "Dauer"@de,
+        "Duration"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:Time ;
+    ns1:definition "Eine Zeitspanne mit einer eigenen Zeitskala und einer in einer anderen Zeitskala verankerten Epoche. Eine Dauer kann durch einen einzigen Wert ausgedrückt werden, da sie die Zeitdifferenz zwischen zwei Zeitpunkten darstellt, z. B. die Differenz zwischen Endzeit und Startzeit oder die Differenz zwischen der aktuellen, momentanen Zeit und der Startzeit."@de,
+        "A period of time with its own timescale and an epoch anchored in another timescale. A duration can be expressed via a single value as it represents the time difference between two points in time, e.g. the difference between EndTime and StartTime or the difference between the current, momentary time and the StartTime."@en ;
+    PMDCo:unit QUDT:s .
+
+PMDCo:Identifier a owl:Class ;
+    rdfs:label "Identifier",
+        "Identifikator"@de,
+        "Identifier"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:ValueObject ;
+    ns1:definition "A named value intended to distinguish between entities."@en .
+
+PMDCo:Laboratory a owl:Class ;
+    rdfs:label "Laboratory",
+        "Labor"@de,
+        "Laboratory"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf <http://www.w3.org/ns/prov#Organization> ;
+    owl:equivalentClass [ ] ;
+    ns1:definition "A place equipped for experimental study in a science or for testing and analysis."@en ;
+    PMDCo:definitionSource "“Laboratory.” Merriam-Webster.com Dictionary, Merriam-Webster, https://www.merriam-webster.com/dictionary/laboratory. Accessed 24 Nov. 2022."@en .
+
+PMDCo:MeasuringProcess a owl:Class ;
+    rdfs:label "MeasuringProcess",
+        "Messprozess"@de,
+        "Measuring Process"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:AnalysingProcess ;
+    ns1:definition "A measurement process is an analysis process that acquires data (usually expressed in numbers) by using tools."@en .
+
+PMDCo:SetPoint a owl:Class ;
+    rdfs:label "SetPoint",
+        "Sollwert"@de,
+        "Set Point"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:ValueScope ;
+    ns1:definition "Die Wertekategorie Sollwert bezeichnet allgemein den gewünschten Wert eines quantitativen Merkmals eines Systems, von dem der Istwert möglichst wenig abweichen soll."@de,
+        "Sollwert bezeichnet allgemein den angestrebten Wert eines quantitativen Merkmales eines Systems, von dem der tatsächliche Istwert so wenig wie möglich abweichen soll. Der Sollwert wird von einem anderen System (z. B. Technik, Mensch) vorgegeben."@de,
+        "The ValueScope Setpoint generally refers to the desired value of a quantitative characteristic of a system, from which the actual value should deviate as little as possible."@en,
+        "This value scope expresses that a :ValueObject is the desired or target value for an essential variable, or process value (PV) of a control system."@en ;
+    PMDCo:definitionSource "https://de.wikipedia.org/wiki/Sollwert"@de,
+        "https://en.wikipedia.org/wiki/Setpoint_(control_system)"@en .
+
+PMDCo:TestingMachine a owl:Class ;
+    rdfs:label "TestingMachine",
+        "Prüfmaschine"@de,
+        "Testing Machine"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:ProcessingNode ;
+    ns1:definition "Diese Entität beschreibt einen Prozessknoten, der für die Durchführung eines bestimmten Tests verwendet wird. Eine Prüfmaschine kann technisch komplex sein und aus mehreren Teilen bestehen."@de,
+        "This entity describes a processing node that is used to perform a defined test. A testing machine may be technically complex and contain several parts."@en .
+
+PMDCo:Dataset a owl:Class ;
+    rdfs:label "Dataset",
+        "Datensatz"@de,
+        "Dataset"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:DigitalEntity ;
+    ns1:definition "A collection of data published in one or more files. Usually instances of this class are also instances of DCAT dataset (see https://www.w3.org/TR/vocab-dcat-2/)."@en .
+
+PMDCo:Date a owl:Class ;
+    rdfs:label "Date",
+        "Datum"@de,
+        "Date"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:Time ;
+    ns1:definition "Eine Erklärung über den Tag der Ausführung oder Herstellung. Basierend auf dem gregorianischen Kalendersystem."@de,
+        "A statement of the day of execution or making. Based on an the gregorian calender system."@en .
+
+PMDCo:NodeSerialNumber a owl:Class ;
+    rdfs:label "NodeSerialNumber",
+        "Knoten-Seriennummer"@de,
+        "Node Serial Number"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:NodeInfo,
+        PMDCo:ProvidedIdentifier ;
+    ns1:definition "A unique identifier of a processing node, typically provided by the manufacturer (manufacturer serial number,  s/n)."@en .
+
+PMDCo:NodeSeries a owl:Class ;
+    rdfs:label "NodeSeries",
+        "Serie"@de,
+        "Node Series"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:NodeInfo ;
+    ns1:altLabel "Knotentyp"@de,
+        "Node Type"@en ;
+    ns1:definition "Processing Node typename, e.g. \"ProTherm500\""@en .
+
+PMDCo:NonTransformativeAnalysisProcess a owl:Class ;
+    rdfs:label "NonTransformativeAnalysisProcess",
+        "Nicht-transformativer Analyseprozess"@de,
+        "Non Transformative Analysis Process"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:AnalysingProcess ;
+    owl:disjointWith PMDCo:TransformativeAnalysisProcess ;
+    ns1:definition "An analysis process that is non-transformative."@en .
+
+PMDCo:Specimen a owl:Class ;
+    rdfs:label "Specimen",
+        "Prüfling"@de,
+        "Specimen"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:Sample ;
+    owl:disjointWith PMDCo:TestPiece ;
+    ns1:definition "An object designed for a specific analysis." .
+
+PMDCo:TestPieceInfo a owl:Class ;
+    rdfs:label "TestPieceInfo",
+        "Prüfkörperinformationen"@de,
+        "Test Piece Info"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:ValueObject ;
+    ns1:definition "Diese Eigenschaft wird verwendet, um Informationen über einen Prüfkörper zu liefern, wie z. B. seine geometrische Form, seine Klassifizierung und andere Parameter, einschließlich von Spezifikationen und Nennwerte. Die Informationen werden in Bezug auf die entsprechenden Normen bereitgestellt."@de,
+        "This property is used to provide information on a test piece such as its geometric shape, classification, and other parameters, including specifications and nominal values. The information is provided with respect to corresponding standards."@en .
+
+PMDCo:TestingRate a owl:Class ;
+    rdfs:label "TestingRate",
+        "Prüfgeschwindigkeit"@de,
+        "Testing Rate"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:ValueObject ;
+    ns1:definition "während des Versuchs verwendete Geschwindigkeit(en)"@de,
+        "rate (resp. rates) used during the test"@en ;
+    PMDCo:definitionSource "DIN EN ISO 6892-1:2019"@en .
+
+PMDCo:ProcessingNode a owl:Class ;
+    rdfs:label "ProcessingNode",
+        "Prozessknoten"@de,
+        "Processing Node"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+    ns1:definition "Prozessknoten sind Werkzeuge, Geräte und Zubehör sowie Software, die für die Durchführung von Prozessen relevant sind, wie z. B. mechanische und chemische Tests sowie Simulationen, Vorhersagen und maschinelles Lernen. Dementsprechend können Prozessknoten Maschinen, Teile von Maschinen und Softwareanwendungen sein."@de,
+        "Processing nodes are tools, equipment and accessories as well as software that are relevant for the performance of processes, such as e.g. mechanical and chemical test as well as simulation, prediction, and machine learning. Accordingly, processing nodes may be machines, parts of machines, and software applications."@en .
+
+PMDCo:TestPiece a owl:Class ;
+    rdfs:label "TestPiece",
+        "Prüfkörper"@de,
+        "Test Piece"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf PMDCo:Sample ;
+    ns1:definition "Teil einer Probe mit bestimmten Dimensionen, bearbeitet oder unbearbeitet, der in einen erforderlichen Zustand gebracht wird, um einer bestimmten Prüfung unterzogen zu werden."@de,
+        "Part of a sample with specified dimensions, machined or un-machined, brought to a required condition for submission to a given test."@en ;
+    PMDCo:definitionSource "EN 10021:2006-12 (European standardization committee: CEN/TC 459/SC 12/WG 4)"@en .
+
+PMDCo:Process a owl:Class ;
+    rdfs:label "Process",
+        "Prozess"@de,
+        "Process"@en ;
+    CheBI:IAO_0000117 "A process is an activity comprising a series of actions or operations conducing to an end. In PMD, a process is conducted via processing nodes and has a discernable duration as part of a workflow. A process consumes objects and parameters. A process potentially generates new objects and measurements."@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> ;
+    ns1:definition "A process is an activity including a series of actions or operations conducing to an end. In PMD, a process is conducted via processing nodes and has a discernable duration as part of a workflow. A process consumes objects and parameters. A process potentially generates new objects and measurements."@en .
+
+PMDCo:ValueObject a owl:Class ;
+    rdfs:label "ValueObject",
+        "Wertobjekt"@de,
+        "Value Object"@en ;
+    rdfs:isDefinedBy <https://w3id.org/pmd/co> ;
+    rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+    owl:equivalentClass [ ] ;
+    ns1:definition """A :ValueObject is an entity which represents a specific value. This value can be a numerical, textual, or a more complex data structure. If a literal value is to be specified, the :value datatype property has to be used. In cases where the value is represented by a resource (e.g. URI), the :resource object property has to be used.
+
+A value object, respectively its value, is always associated with an entity of type :Process, :ProcessingNode, :Object (e.g. :Specimen), :DigitalEntity, :Project, or other :ValueObject. The value is meant to be a charactaristic of the associated entity. To express this association it is indended to use the :characteristic object property if the value decribes some \\"quality\\", or the :participant (:input,:output) if it is participating a process.
+
+A value object might also refer to a unit. The :unit property might be used (e.g. with QUDT ontology).
+
+Instances of a value object might also be a type of :ValueScope, namely a :SetPoint (nominal value), or :Measurement (measured value). With :Setpoint the intend is to express, that the value is meant to be some preset, setting or nominal value. :Measurement expresses, that the value has been measured or determined somehow (see example).
+
+Instances of a value object might also be specified in a specific :DataScope (:Metadata, :PrimaryData, :SecondaryData)."""@en ;
+    ns1:example """- the length of a specimen
+- the model number of a machine
+- a person involved in a process
+- a force on an object"""@en,
+        """:Length rdfs:subClass :ValueObject .
+ex:vo1 a :Length .
+ex:vo1 a :Measurement .
+ex:vo1 a :PrimaryData .
+ex:vo1 :unit qudt:MilliM . 
+ex:vo1 :value "123.45"
+ex:p1 a :LengthMeasuringProcess .
+ex:p1 :characteristic ex:vo1 ."""@en,
+        "The length of a specimen, which has been measured as primary data. Its actual value is 123.45 millimeters."@en .
+
