@@ -1,0 +1,12 @@
+ValueType Name,Belongs to Ontology,Domain,Range,Definition of Property,Logical Axioms,Alternative Name(s),fullName
+The name of the valuetype of a variable that you would like to include in your ontology schema.,"If the valuetype already exists in an ontology below, select the ontology from the dropdown menu. Otherwise, please leave blank.","Please enter the term that the relationship starts from. (Example: If you would like to define the relationship that a tool term ""outputs"" an image term, select the tool term).","Please enter the value type you would like to attach to the term
+*Only fill out for Data Property relationships*","Please provide the definition the relationship. For reccomendation on a definition, search the term in https://schema.org. If the term is already in a selected ontology, please leave blank.","Please provide any logic you would like to attach to your term. For information and examples on logical axioms, please visit https://www.w3.org/TR/daml+oil-axioms/ 
+*Optional*","Please provide any alternative names for the relationship in the literature.
+*Optional*",
+value,pmd,SampleID,xsd:string,,,,pmd:value(SampleID->xsd:string)
+value,pmd,ProcessingMethod,xsd:string,,,,pmd:value(ProcessingMethod->xsd:string)
+value,pmd,MaterialName,xsd:string,,,,pmd:value(MaterialName->xsd:string)
+value,pmd,pmd:Length,xsd:float,,,,pmd:value(pmd:Length->xsd:float)
+value,pmd,pmd:Width,xsd:float,,,,pmd:value(pmd:Width->xsd:float)
+value,pmd,pmd:Thickness,xsd:float,,,,pmd:value(pmd:Thickness->xsd:float)
+,,,,,,,(->)

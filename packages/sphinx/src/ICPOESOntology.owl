@@ -1,0 +1,242 @@
+@prefix ICPOESOntology: <https://cwrusdle.bitbucket.io/ICPOESOntology/> .
+@prefix chebi: <http://purl.obolibrary.org/obo/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmdco: <https://w3id.org/pmd/co/> .
+@prefix qudt: <http://qudt.org/2.1/vocab/unit#> .
+@prefix rdf1: <https://www.w3.org/TR/2014/REC-rdf-schema-20140225/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+chebi:CHEBI_24431 a rdfs:Class ;
+    rdfs:label "CHEBI_24431" .
+
+ICPOESOntology:ArgonFlowRate a rdfs:Class ;
+    rdfs:label "ArgonFlowRate" ;
+    rdfs:subClassOf pmdco:TestingRate ;
+    skos:definition "The flow rate of argon in the ICPOES machine" ;
+    pmdco:unit qudt:L-PER-MIN .
+
+ICPOESOntology:Filter a rdfs:Class ;
+    rdfs:label "Filter" ;
+    rdfs:subClassOf pmdco:ProcessingNode ;
+    skos:definition "a porous device for removing impurities or solid particles from a liquid or gas passed through it." ;
+    pmdco:unit qudt:MicroM .
+
+ICPOESOntology:FilteringProcess a rdfs:Class ;
+    rdfs:label "FilteringProcess" ;
+    rdfs:subClassOf pmdco:Process ;
+    skos:definition "Process of filtering" .
+
+ICPOESOntology:ICPOESProcess a rdfs:Class ;
+    rdfs:label "ICPOESProcess" ;
+    rdfs:subClassOf ICPOESOntology:SpectometryMeasuringProcess ;
+    skos:definition "A process related to ICPOES" .
+
+ICPOESOntology:ICPOESSamplePrepProcess a rdfs:Class ;
+    rdfs:label "ICPOESSamplePrepProcess" ;
+    rdfs:subClassOf pmdco:Process ;
+    skos:definition "Process of preparing a sample for an ICPOES Experiment" .
+
+ICPOESOntology:ICPOESTestingMachine a rdfs:Class ;
+    rdfs:label "ICPOESTestingMachine" ;
+    rdfs:subClassOf pmdco:TestingMachine ;
+    skos:definition "A testing machine used in an ICPOES experiment" .
+
+ICPOESOntology:ICPOESView a rdfs:Class ;
+    rdfs:label "ICPOESView" ;
+    rdfs:subClassOf pmdco:ValueObject ;
+    skos:definition "The configuration of the ICPOES machine (radial or axial)" .
+
+ICPOESOntology:SampleFlowRate a rdfs:Class ;
+    rdfs:label "SampleFlowRate" ;
+    rdfs:subClassOf pmdco:TestingRate ;
+    skos:definition "The flow rate of the sample in the ICPOES machine" ;
+    pmdco:unit qudt:MilliL-PER-MIN .
+
+ICPOESOntology:SpectometryMeasuringProcess a rdfs:Class ;
+    rdfs:label "SpectometryMeasuringProcess" ;
+    rdfs:subClassOf pmdco:MeasuringProcess ;
+    skos:definition "The process by which you can measure the concentration of elements in a certain sample" .
+
+ICPOESOntology:Spectrometer a rdfs:Class ;
+    rdfs:label "Spectrometer" ;
+    rdfs:subClassOf ICPOESOntology:ICPOESTestingMachine ;
+    skos:definition "A scientific instrument used to separate and measure spectral components of a physical phenomenon" .
+
+ICPOESOntology:TestPieceName a rdfs:Class ;
+    rdfs:label "TestPieceName" ;
+    rdfs:subClassOf pmdco:Identifier ;
+    skos:definition "Name of test piece for ICPOES experiment" .
+
+ICPOESOntology:Volume a rdfs:Class ;
+    rdfs:label "Volume" ;
+    rdfs:subClassOf pmdco:ValueObject ;
+    skos:definition "the amount of space that a substance or object occupies" ;
+    pmdco:unit qudt:MilliL .
+
+ICPOESOntology:dilutionFactor a rdfs:Class ;
+    rdfs:label "dilutionFactor" ;
+    rdfs:subClassOf pmdco:SetPoint ;
+    skos:definition "Factor of dilution" .
+
+ICPOESOntology:dilutionProcess a rdfs:Class ;
+    rdfs:label "dilutionProcess" ;
+    rdfs:subClassOf pmdco:Process ;
+    skos:definition "Process of diluting" .
+
+ICPOESOntology:isCalibrationSample a rdfs:Class ;
+    rdfs:label "isCalibrationSample" ;
+    rdfs:subClassOf pmdco:ValueObject ;
+    skos:definition "Boolean value corresponding to whether the sample is for calibration of ICPOES machine" .
+
+pmdco:Dataset a rdfs:Class ;
+    rdfs:label "Dataset" .
+
+pmdco:Date a rdfs:Class ;
+    rdfs:label "Date" .
+
+pmdco:Duration a rdfs:Class ;
+    rdfs:label "Duration" ;
+    pmdco:unit qudt:s .
+
+pmdco:Identifier a rdfs:Class ;
+    rdfs:label "Identifier" .
+
+pmdco:Laboratory a rdfs:Class ;
+    rdfs:label "Laboratory" .
+
+pmdco:MeasuringProcess a rdfs:Class ;
+    rdfs:label "MeasuringProcess" .
+
+pmdco:NodeSerialNumber a rdfs:Class ;
+    rdfs:label "NodeSerialNumber" .
+
+pmdco:NodeSeries a rdfs:Class ;
+    rdfs:label "NodeSeries" .
+
+pmdco:NonTransformativeAnalysisProcess a rdfs:Class ;
+    rdfs:label "NonTransformativeAnalysisProcess" .
+
+pmdco:Process a rdfs:Class ;
+    rdfs:label "Process" .
+
+pmdco:ProcessingNode a rdfs:Class ;
+    rdfs:label "ProcessingNode" .
+
+pmdco:SetPoint a rdfs:Class ;
+    rdfs:label "SetPoint" .
+
+pmdco:Specimen a rdfs:Class ;
+    rdfs:label "Specimen" .
+
+pmdco:TestPiece a rdfs:Class ;
+    rdfs:label "TestPiece" .
+
+pmdco:TestPieceInfo a rdfs:Class ;
+    rdfs:label "TestPieceInfo" .
+
+pmdco:TestingMachine a rdfs:Class ;
+    rdfs:label "TestingMachine" .
+
+pmdco:TestingRate a rdfs:Class ;
+    rdfs:label "TestingRate" .
+
+pmdco:ValueObject a rdfs:Class ;
+    rdfs:label "ValueObject" .
+
+rdf1:Bag a rdfs:Class ;
+    rdfs:label "Bag" .
+
+ICPOESOntology:Ontology a owl:Ontology ;
+    rdfs:label "ICPOESOntology" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Daniel Struk",
+        "Erika I. Barcelos",
+        "Hayden Caldwell",
+        "Jiana Kanbo",
+        "Kiefer Lin",
+        "Peter J. Hesketh",
+        "Roger H. French" ;
+    dcterms:description "An ontology describing the Inductively coupled plasma-optical emission spectrometry domain." ;
+    dcterms:hasVersion "0.2" ;
+    dcterms:title "ICPOESOntology" .
+
+pmdco:characteristic a owl:ObjectProperty ;
+    rdfs:domain ICPOESOntology:FilteringProcess,
+        ICPOESOntology:ICPOESProcess,
+        ICPOESOntology:Spectrometer,
+        ICPOESOntology:dilutionProcess,
+        pmdco:Specimen,
+        pmdco:TestPiece ;
+    rdfs:range ICPOESOntology:ArgonFlowRate,
+        ICPOESOntology:Filter,
+        ICPOESOntology:ICPOESView,
+        ICPOESOntology:SampleFlowRate,
+        ICPOESOntology:TestPieceName,
+        ICPOESOntology:Volume,
+        ICPOESOntology:dilutionFactor,
+        ICPOESOntology:isCalibrationSample,
+        pmdco:Date,
+        pmdco:Duration,
+        pmdco:Laboratory,
+        pmdco:NodeSerialNumber,
+        pmdco:NodeSeries,
+        pmdco:TestPieceInfo,
+        rdf1:Bag .
+
+pmdco:executedBy a owl:ObjectProperty ;
+    rdfs:domain ICPOESOntology:ICPOESProcess ;
+    rdfs:range ICPOESOntology:Spectrometer .
+
+pmdco:input a owl:ObjectProperty ;
+    rdfs:domain ICPOESOntology:ICPOESProcess,
+        ICPOESOntology:ICPOESSamplePrepProcess,
+        pmdco:NonTransformativeAnalysisProcess ;
+    rdfs:range pmdco:Dataset,
+        pmdco:Specimen,
+        pmdco:TestPiece .
+
+pmdco:nextProcess a owl:ObjectProperty ;
+    rdfs:domain ICPOESOntology:ICPOESSamplePrepProcess ;
+    rdfs:range ICPOESOntology:ICPOESProcess .
+
+pmdco:output a owl:ObjectProperty ;
+    rdfs:domain ICPOESOntology:ICPOESSamplePrepProcess,
+        ICPOESOntology:Spectrometer,
+        pmdco:NonTransformativeAnalysisProcess ;
+    rdfs:range pmdco:Dataset,
+        pmdco:TestPiece .
+
+pmdco:resource a owl:DatatypeProperty ;
+    rdfs:domain ICPOESOntology:ArgonFlowRate ;
+    rdfs:range xsd:string .
+
+pmdco:subordinateProcess a owl:ObjectProperty ;
+    rdfs:domain ICPOESOntology:ICPOESSamplePrepProcess ;
+    rdfs:range ICPOESOntology:FilteringProcess,
+        ICPOESOntology:dilutionProcess .
+
+pmdco:value a owl:DatatypeProperty ;
+    rdfs:domain ICPOESOntology:ArgonFlowRate,
+        ICPOESOntology:Filter,
+        ICPOESOntology:ICPOESView,
+        ICPOESOntology:SampleFlowRate,
+        ICPOESOntology:TestPieceName,
+        ICPOESOntology:Volume,
+        ICPOESOntology:dilutionFactor,
+        pmdco:Date,
+        pmdco:NodeSerialNumber,
+        pmdco:NodeSeries,
+        pmdco:TestPieceInfo ;
+    rdfs:range xsd:dateTime,
+        xsd:float,
+        xsd:integer,
+        xsd:string .
+
+rdf1:_1 a owl:ObjectProperty ;
+    rdfs:domain rdf1:Bag ;
+    rdfs:range chebi:CHEBI_24431 .
+

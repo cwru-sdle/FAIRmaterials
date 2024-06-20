@@ -1,0 +1,40 @@
+Variable Name,Belongs to Ontology,Parent Variable,Definition of Variable,Alternative Name(s),Unit,Logical Axioms,fullName
+The variable that you would like to represent in your ontology schema.,"If the variable exists in an ontology below, select the ontology from the dropdown menu. Otherwise, please leave blank.","Please type the variable from the Parent Ontology that you would like to connect your variable to. If the variable is already in a selected ontology, please leave blank.","Please provide the definition the variable. For reccomendation on a definition, search the term in https://schema.org. If the variable is already in a selected ontology, please leave blank.","Please provide any alternative names for the variable in the literature. If the variable is already in a selected ontology, please leave blank
+*Optional*","Please provide the unit that the variable is expressed in your data. For a dictionary of standardized units, please visit https://qudt.org. If the variable is already in a selected ontology, please leave blank
+*Optional*","Please provide any logic you would like to attach to your variable. For information and examples on logical axioms, please visit https://www.w3.org/TR/daml+oil-axioms/ If the variable is already in a selected ontology, please leave blank.
+*Optional*",
+Laboratory,PMDCo,,,,,,PMDCo:Laboratory
+Date,PMDCo,,,,,,PMDCo:Date
+ValueObject,PMDCo,,,,,,PMDCo:ValueObject
+Volume,,PMDCo:ValueObject,the amount of space that a substance or object occupies,,QUDT:MilliL,,Volume
+Specimen,PMDCo,,,,,,PMDCo:Specimen
+ProcessingNode,PMDCo,,,,,,PMDCo:ProcessingNode
+Filter,,PMDCo:ProcessingNode,a porous device for removing impurities or solid particles from a liquid or gas passed through it.,,QUDT:MicroM,,Filter
+Process,PMDCo,,,,,,PMDCo:Process
+FilteringProcess,,PMDCo:Process,Process of filtering,,,,FilteringProcess
+ICPOESSamplePrepProcess,,PMDCo:Process,Process of preparing a sample for an ICPOES Experiment,,,,ICPOESSamplePrepProcess
+dilutionProcess,,PMDCo:Process,Process of diluting,,,,dilutionProcess
+SetPoint,PMDCo,,,,,,PMDCo:SetPoint
+dilutionFactor,,PMDCo:SetPoint,Factor of dilution,,,,dilutionFactor
+TestPiece,PMDCo,,,,,,PMDCo:TestPiece
+TestPieceInfo,PMDCo,,,,,,PMDCo:TestPieceInfo
+isCalibrationSample,,PMDCo:ValueObject,Boolean value corresponding to whether the sample is for calibration of ICPOES machine,,,,isCalibrationSample
+Identifier,PMDCo,,,,,,PMDCo:Identifier
+TestPieceName,,PMDCo:Identifier,Name of test piece for ICPOES experiment,,,,TestPieceName
+Bag,RDF,,,,,,RDF:Bag
+CHEBI_24431,CheBI,,,,,,CheBI:CHEBI_24431
+ICPOESView,,PMDCo:ValueObject,The configuration of the ICPOES machine (radial or axial),,,,ICPOESView
+Duration,PMDCo,,,,QUDT:s,,PMDCo:Duration
+TestingRate,PMDCo,,,,,,PMDCo:TestingRate
+ArgonFlowRate,,PMDCo:TestingRate,The flow rate of argon in the ICPOES machine,,QUDT:L-PER-MIN,,ArgonFlowRate
+SampleFlowRate,,PMDCo:TestingRate,The flow rate of the sample in the ICPOES machine,,QUDT:MilliL-PER-MIN,,SampleFlowRate
+MeasuringProcess,PMDCo,,,,,,PMDCo:MeasuringProcess
+SpectometryMeasuringProcess,,PMDCo:MeasuringProcess,The process by which you can measure the concentration of elements in a certain sample,,,,SpectometryMeasuringProcess
+ICPOESProcess,,SpectometryMeasuringProcess,A process related to ICPOES,,,,ICPOESProcess
+TestingMachine,PMDCo,,,,,,PMDCo:TestingMachine
+ICPOESTestingMachine,,PMDCo:TestingMachine,A testing machine used in an ICPOES experiment,,,,ICPOESTestingMachine
+Spectrometer,,ICPOESTestingMachine,A scientific instrument used to separate and measure spectral components of a physical phenomenon,,,,Spectrometer
+NodeSerialNumber,PMDCo,,,,,,PMDCo:NodeSerialNumber
+NodeSeries,PMDCo,,,,,,PMDCo:NodeSeries
+Dataset,PMDCo,,,,,,PMDCo:Dataset
+NonTransformativeAnalysisProcess,PMDCo,,,,,,PMDCo:NonTransformativeAnalysisProcess

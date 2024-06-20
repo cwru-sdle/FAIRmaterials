@@ -1,0 +1,31 @@
+Variable Name,Belongs to Ontology,Parent Variable,Definition of Variable,Alternative Name(s),Unit,Logical Axioms,fullName
+The variable that you would like to represent in your ontology schema.,"If the variable exists in an ontology below, select the ontology from the dropdown menu. Otherwise, please leave blank.","Please type the variable from the Parent Ontology that you would like to connect your variable to. If the variable is already in a selected ontology, please leave blank.","Please provide the definition the variable. For reccomendation on a definition, search the term in https://schema.org. If the variable is already in a selected ontology, please leave blank.","Please provide any alternative names for the variable in the literature. If the variable is already in a selected ontology, please leave blank
+*Optional*","Please provide the unit that the variable is expressed in your data. For a dictionary of standardized units, please visit https://qudt.org. If the variable is already in a selected ontology, please leave blank
+*Optional*","Please provide any logic you would like to attach to your variable. For information and examples on logical axioms, please visit https://www.w3.org/TR/daml+oil-axioms/ If the variable is already in a selected ontology, please leave blank.
+*Optional*",
+ProcessingNode,PMDCo,,,,,,PMDCo:ProcessingNode
+ProdModule,,PMDCo:ProcessingNode,A solar module product,,,,ProdModule
+Manufacturer,PMDCo,,,,,,PMDCo:Manufacturer
+ValueObject,PMDCo,,,,,,PMDCo:ValueObject
+CellCount,,PMDCo:ValueObject,The number of cells in a module,,,,CellCount
+Color,,PMDCo:ValueObject,the visual perception based on the electromagnetic spectrum,,,,Color
+FrameColor,,Color,The color of the module frame,,,,FrameColor
+BacksheetColor,,Color,Color of the backsheet,,,,BacksheetColor
+Component,PMDCo,,,,,,PMDCo:Component
+ProdBacksheet,,PMDCo:Component,A backsheet of a photovoltaic module,,,,ProdBacksheet
+MaterialDesignation,PMDCo,PMDCo:ProcessingNode,,,,,PMDCo:MaterialDesignation
+BacksheetMaterial,,PMDCo:MaterialDesignation,Material the backsheet is made out of,,,,BacksheetMaterial
+EncapsulantMaterial,,PMDCo:MaterialDesignation,Material the encapsulant is made out of,,,,EncapsulantMaterial
+ProdEncapsulant,,PMDCo:Component,An encapsulant of a photovoltaic module,,,,ProdEncapsulant
+ProdJunctionBox,,PMDCo:Component,An encapsulant of a photovoltaic module,,,,ProdJunctionBox
+Length,PMDCo,,,,QUDT:CentiM,,PMDCo:Length
+Width,PMDCo,,,,QUDT:CentiM,,PMDCo:Width
+Thickness,PMDCo,,,,QUDT:CentiM,,PMDCo:Thickness
+Weight,PMDCo,,,,QUDT:KiloGM,,PMDCo:Weight
+ModuleEfficiency,,PMDCo:ValueObject,The efficiency of the solar module at standard test condition (STC),,,,ModuleEfficiency
+FluorescencePattern,,PMDCo:ValueObject,Pattern of modules under UV Fluorescence (square or ring),,,,FluorescencePattern
+PowerSTC,,PMDCo:ValueObject,"DC power at Standard Test Condition (STC). STC is defined as 1000 W/m2 irradiance, 25C and ASTM G173-03 standard solar spectrum",,QUDT:KiloW,,PowerSTC
+Temperature,PMDCo,,,,,,PMDCo:Temperature
+TemperatureNOCT,,PMDCo:Temperature,The nominal operating cell temperature (NOCT) of a solar module,,QUDT:DEG_C,,TemperatureNOCT
+NodeSerialNumber,PMDCo,,,,,,PMDCo:NodeSerialNumber
+ProdModuleID,,PMDCo:NodeSerialNumber,Alphanumeric identifier for the metadata document,,,,ProdModuleID
