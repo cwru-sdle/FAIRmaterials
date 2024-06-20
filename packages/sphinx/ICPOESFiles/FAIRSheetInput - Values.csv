@@ -1,1 +1,0 @@
-PMDCo:value(PMDCo:Date->xsd:dateTime),PMDCo:value(PMDCo:Volume->xsd:integer),PMDCo:value(Filter->xsd:float),PMDCo:value(dilutionFactor->xsd:integer),PMDCo:value(PMDCo:TestPieceInfo->xsd:float),PMDCo:value(TestPieceName->xsd:string),PMDCo:value(ICPOESView->xsd:string)
