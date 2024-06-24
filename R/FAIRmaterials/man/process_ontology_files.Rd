@@ -69,7 +69,7 @@ Note that specifying a base uri is required for merging ontologies.
 }
 \examples{
 # Process the CSV files in the XRay folder
-example_folder1 <- system.file("extdata", "Xray", package = "FAIRmaterials")
+example_folder1 <- system.file("extdata", "XRay", package = "FAIRmaterials")
 process_ontology_files(example_folder1, add_external_onto_info = FALSE)
 
 \dontrun{
