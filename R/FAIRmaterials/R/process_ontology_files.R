@@ -3,7 +3,7 @@
 #' @description This function reads, processes, and combines ontology CSV files from a specified folder.
 #' These CSV files must be formatted with template from:
 #'
-#' \url{https://docs.google.com/spreadsheets/d/1k7gFRc1Yslc-m65aWfFCxqk5UtrKZl9c3GyEFQvLSFU/edit?usp=sharing}
+#' \url{https://docs.google.com/spreadsheets/d/1k7gFRc1Yslc-m65aWfFCxqk5UtrKZl9c3GyEFQvLSFU/edit?usp=drive_link}
 #'
 #' It can handle subdirectories by producing separate unmerged outputs for each subdirectory.
 #' The function generates an ontology tree plot, saves it as SVG, and serializes the RDF object
@@ -53,15 +53,21 @@
 #' @importFrom grDevices svg dev.off
 #'
 #' @examples
-#' # Process the CSV files in the XRay folder
-#' example_folder1 <- system.file("extdata", "XRay", package = "FAIRmaterials")
-#' process_ontology_files(example_folder1, add_external_onto_info = FALSE)
+#' # Create temporary directory
+#' temp_dir <- tempdir()
+#' XRay_test_folder <- file.path(temp_dir, "XRay")
+#' dir.create(XRay_test_folder, recursive = TRUE)
 #'
-#' \dontrun{
-#' # Process the CSV files in the PV folder
-#' example_folder2 <- system.file("extdata", "PV", package = "FAIRmaterials")
-#' process_ontology_files(example_folder2, add_external_onto_info = FALSE)
-#' }
+#' # Copy CSV files from the package's extdata to the temporary directory
+#' extdata_path <- system.file("extdata", "XRay", package = "FAIRmaterials")
+#' file.copy(from = list.files(extdata_path, full.names = TRUE),
+#'   to = XRay_test_folder, recursive = TRUE)
+#'
+#' # Process the CSV files in temp the XRay folder
+#' process_ontology_files(XRay_test_folder, add_external_onto_info = FALSE)
+#'
+#' # Clean up
+#' unlink(temp_dir, recursive = TRUE)
 process_ontology_files <- function(folder_path, add_external_onto_info = FALSE, include_graph_valuetype = TRUE, merge_base_uri = NULL, merge_title = NULL, merge_author = NULL, merge_version = NULL, merge_description = NULL) {
 
   all_files <- list.files(folder_path, full.names = TRUE, recursive = TRUE, pattern = "\\.csv$")

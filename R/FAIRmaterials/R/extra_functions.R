@@ -797,6 +797,7 @@ process_files <- function(files, output_dir, output_prefix = "", include_valuety
   namespace <- generate_namespace(NameSpace_t, OntologyInfo_t, mergeURL = mergeURL, mergeTitle = mergeTitle)
   serialize_rdf_obj(rdf_temp, namespace = namespace, turtle_path, "turtle", base = base)
   serialize_rdf_obj(rdf_temp, namespace = namespace, jsonld_path, "jsonld", base = base)
+  rdflib::rdf_free(rdf_temp)
 }
 
 #' Generate Namespace from Data Frame

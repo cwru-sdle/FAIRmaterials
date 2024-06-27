@@ -1,6 +1,6 @@
 Package: FAIRmaterials
 Title: Ontology Tools with Data FAIRification in Development
-Version: 0.4.2
+Version: 0.4.2.1
 Authors@R: c(
     person(
         given = c("Jonathan", "E"),

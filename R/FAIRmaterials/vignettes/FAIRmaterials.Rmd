@@ -40,7 +40,19 @@ Put the sheets, created from the template (described below), for one or more ont
 
 # How to use FAIR CSV template:
 
-To Prepare your CSV file, ensure your CSV file contains the appropriate ontological terms and corresponding data using this template: [FAIR CSV Template](https://docs.google.com/spreadsheets/d/1k7gFRc1Yslc-m65aWfFCxqk5UtrKZl9c3GyEFQvLSFU/edit?usp=sharing)
+To Prepare your CSV file, ensure your CSV file contains the appropriate ontological terms and corresponding data using this template: [FAIR CSV Template](https://docs.google.com/spreadsheets/d/1k7gFRc1Yslc-m65aWfFCxqk5UtrKZl9c3GyEFQvLSFU/edit?usp=drive_link)
+
+The XLSX versions of the templates can be found in the package using this code:
+```{r, eval = FALSE}
+# Load the necessary library
+library(utils)
+
+# Specifying the path to the Zip file
+zip_file <- system.file("extdata", "FAIRSheetTemplatesZIP.zip", package = "FAIRmaterials")
+
+# Extract files from the Zip
+unzip(zip_file, exdir = "path/to/destination/for/templates")
+```
 
 ## Example of XRay ontology FAIR CSV sheet 
 Example Name Space Sheet:
