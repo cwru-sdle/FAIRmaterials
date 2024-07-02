@@ -39,6 +39,7 @@ authors:
 - name: Roger H. French
   corresponding: yes
   orcid: "0000-0002-6162-0532"
+  affiliation: 1, 2, 3
 bibliography: paper.bib
 affiliations:
 - name: Department of Materials Science and Engineering, Case Western Reserve University,
@@ -53,6 +54,7 @@ affiliations:
 editor_options: 
   markdown: 
     wrap: sentence
+
 ---
 
 # Summary
@@ -273,3 +275,4 @@ The authors would like to sincerely thank these organizations for their financia
 \newpage
 
 # References
+
