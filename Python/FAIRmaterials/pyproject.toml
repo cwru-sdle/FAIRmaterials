@@ -1,22 +1,7 @@
 [tool.poetry]
 name = "FAIRmaterials"
-version = "0.4.2"
-description = """
-Translates several CSV files with ontological terms and corresponding
-data into RDF triples. These RDF triples are stored in OWL and JSON-LD files,
-facilitating data accessibility, interoperability, and knowledge unification.
-The triples are also visualized in a graph saved as an SVG. The input CSVs
-must be formatted with a template from a public Google Sheet; see README or
-vignette for more information. This is a tool is used by the SDLE Research
-Center at Case Western Reserve University to create and visualize material
-science ontologies, and it includes example ontologies to demonstrate its
-capabilities. This work was supported by the U.S. Department of Energy’s
-Office of Energy Efficiency and Renewable Energy (EERE) under Solar Energy
-Technologies Office (SETO) Agreement Numbers E-EE0009353 and DE-EE0009347,
-Department of Energy (National Nuclear Security Administration) under Award
-Number DE-NA0004104 and Contract number B647887, and U.S. National Science
-Foundation Award under Award Number 2133576.
-"""
+version = "0.4.2.2"
+description = "Translates several CSV files with ontological terms and corresponding data into RDF triples. These RDF triples are stored in OWL and JSON-LD files, facilitating data accessibility, interoperability, and knowledge unification. The triples are also visualized in a graph saved as an SVG. The input CSVs must be formatted with a template from a public Google Sheet; see README or vignette for more information. This is a tool used by the SDLE Research Center at Case Western Reserve University."
 authors = [
     "Alexander Harding Bradley",
     "Priyan Rajamohan",
@@ -71,28 +56,16 @@ authors = [
     "Erika I. Barcelos",
     "Roger H. French <rxf131@case.edu>"
 ]
-readme = "README.md"
 license = "BSD-2-Clause"
+readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9.18"
 rdflib = "^7.0.0"
 pylode = "^3.1.4"
 matplotlib = "^3.6.2"
-numpy = "^1.23.5"
+numpy = "^1.9.3"
 graphviz = "^0.20.1"
-
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
-
-[build-system]
-requires = ["setuptools>=42", "wheel"]
-build-backend = "setuptools.build_meta"
-
-[project.scripts]
-FAIRMaterials = "FAIRmaterials.main:main"
 
 [tool.poetry.dev-dependencies]
 pytest = "*"
@@ -100,3 +73,9 @@ pytest-cov = "*"
 
 [tool.pytest.ini_options]
 pythonpath = ["."]
+
+[tool.setuptools.packages.find]
+include = ["FAIRmaterials*"]
+
+[tool.poetry.scripts]
+FAIRmaterials = "FAIRmaterials.__main__:main"

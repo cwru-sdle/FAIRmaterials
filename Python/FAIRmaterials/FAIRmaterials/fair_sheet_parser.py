@@ -4,6 +4,7 @@ import csv
 from collections import defaultdict
 import re
 import glob
+from pathlib import Path
 
 class FairSheetParser:
     """
@@ -56,7 +57,6 @@ class FairSheetParser:
             "xsd:date": XSD.date,
             "xsd:dateTime": XSD.dateTime,
             "xsd:float": XSD.float,
-            "xsd:seq": XSD.Sequence,
             "xsd:boolean": XSD.boolean
         }
 
@@ -324,6 +324,9 @@ class FairSheetParser:
             obj_property_list = {}
 
             for row in csv_reader:
+                # Skip rows where Domain or Range are empty
+                if not row["Domain"] or not row["Range"]:
+                    continue
                 obj_property_uri = self.__namespace_uris[self.__ontology_name][Literal(row["Relationship Name"])]
                 graphviz_obj_prop_uri = re.sub(pattern, '', obj_property_uri + row["Domain"] + row["Range"])
 
@@ -427,6 +430,11 @@ class FairSheetParser:
             data_property_list = {}
 
             for row in csv_reader:
+
+                # Skip rows where Domain or Range are empty
+                if not row["Domain"] or not row["Range"]:
+                    continue
+
                 # Generate URI for the data property
                 data_property_uri = self.__namespace_uris[self.__ontology_name][Literal(row["ValueType Name"])]
                 graphviz_data_prop_uri = re.sub(pattern, '', data_property_uri + row["Domain"] + row["Range"])
@@ -496,3 +504,21 @@ class FairSheetParser:
             str: The user-specified name of the ontology
         """
         return self.__ontology_name
+
+    def get_ontology_base_uri(self):
+        """
+        Gets the base URI of the Ontology
+
+        Returns:
+            str: The user-specified base URI of the ontology
+        """
+        return self.__ontology_base_uri
+    
+    def get_namespace_uris(self):
+        """
+        Gets the namespace URIs of the Ontology
+
+        Returns:
+            str: The user-specified namespace URIs of the ontology
+        """
+        return self.__namespace_uris

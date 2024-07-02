@@ -6,7 +6,7 @@ from FAIRmaterials.rdflib_graph_saver import RDFLibGraphSaver
 from FAIRmaterials.rdflib_graph_merger import RDFLibGraphMerger
 import os
 
-def __main__():
+def main():
     """
     Main function to parse command-line arguments and execute the FairSheetParser and RDFLibGraphSaver methods.
 
@@ -107,4 +107,4 @@ def __main__():
 
 # Execute main function if the script is run directly
 if __name__ == "__main__":
-    __main__()
+    main()

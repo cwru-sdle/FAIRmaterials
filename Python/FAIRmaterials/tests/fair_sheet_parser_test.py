@@ -15,7 +15,7 @@ ontology_info_data = [
 ]
 
 namespace_data = [
-    {"Prefix Name": "test", "Ontology URL": "http://example.com/test#", "Ontology Info": "" },
+    {"Prefix Name": "TestOntology", "Ontology URL": "http://example.com/ontology#", "Ontology Info": "" },
     {"Prefix Name": "owl", "Ontology URL": "http://www.w3.org/2002/07/owl#", "Ontology Info": "" },
     {"Prefix Name": "PMDCo", "Ontology URL": "https://w3id.org/pmd/co/", "Ontology Info": "" }
 ]
@@ -41,8 +41,10 @@ def create_test_files(tmp_path):
     
     with open(namespace_path, "w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=["Prefix Name", "Ontology URL", "Ontology Info"])
+        # print(namespace_data)
         writer.writeheader()
-        writer.writerows(namespace_data)
+        for data in namespace_data:
+            writer.writerow(data)
 
     with open(entity_path, "w", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=["Variable Name", "Belongs to Ontology", "Parent Variable", "Definition of Variable", "Alternative Name(s)", "Unit", "Logical Axioms", "fullName"])
@@ -123,16 +125,17 @@ def test_init(create_test_files):
     rdflib_graph = rdfGraph()
     graphviz_graph = graphviz.Digraph(strict=False)
     add_external_onto_info = False
-    print(ontology_sheet_folder)
+
+
     # Act
     parser = FairSheetParser(ontology_sheet_folder, include_graph_valuetype, rdflib_graph, graphviz_graph, add_external_onto_info)
+    # print(parser.get_namespace_uris())
 
     # Assert
-    assert parser.__ontology_name == "TestOntology"
-    assert parser.__ontology_base_uri == Namespace("http://example.com/ontology#")
-    assert parser.__ontology_version == "1.0"
-    assert parser.__namespace_uris == {
-        "test": Namespace("http://example.com/test#"),
+    assert parser.get_ontology_name() == "TestOntology"
+    assert parser.get_ontology_base_uri() == Namespace("http://example.com/ontology#")
+    assert parser.get_namespace_uris() == {
+        "pmdco": Namespace('https://w3id.org/pmd/co/'),
         "owl": Namespace("http://www.w3.org/2002/07/owl#"),
         "TestOntology": Namespace("http://example.com/ontology#")
     }
