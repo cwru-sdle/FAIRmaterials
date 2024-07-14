@@ -1,0 +1,2 @@
+[console_scripts]
+FAIRmaterials = FAIRmaterials.__main__:main
