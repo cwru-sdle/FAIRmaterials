@@ -1,4 +1,7 @@
+# FAIRmaterials
+
 ## What is FAIRmaterials and what does it do?
+
 'FAIRmaterials' translates several CSV files from the template (described below) with ontological terms and corresponding data into RDF triples. These RDF triples are then stored in OWL and JSON-LD files, facilitating data accessibility, interoperability, and knowledge unification. The triples are also visualized in a graph saved as an SVG. This package reads, processes, and combines ontology CSV files from a specified folder. The package can handle subdirectories by producing separate unmerged outputs for each subdirectory and a merged output from all files in the input path. This tool, developed for use by the SDLE Research Center at Case Western Reserve University, facilitates the creation and visualization of material science ontologies.
 
 ## How to use FAIR CSV template 
@@ -18,8 +21,15 @@ Please see the LICENSE.txt file, in the root of this repository, for further det
 
 [2]: https://cran.r-project.org/web/licenses/BSD_3_clause "BSD-3-Clause"
 
-## Authors: 
-|
+
+[^1]: [FAIR CSV Template](https://docs.google.com/spreadsheets/d/1k7gFRc1Yslc-m65aWfFCxqk5UtrKZl9c3GyEFQvLSFU/edit?usp=sharing)
+[^2]: [BSD-3-Clause](https://cran.r-project.org/web/licenses/BSD_3_clause)
+
+## Acknowledgment
+
+This work was supported by the U.S. Department of Energy’s Office of Energy Efficiency and Renewable Energy (EERE) under Solar Energy Technologies Office (SETO) Agreement Numbers DE-EE0009353 and DE-EE0009347, Department of Energy (National Nuclear Security Administration) under Award Number DE-NA0004104 and Contract number B647887, and U.S. National Science Foundation Award under Award Number 2133576.
+
+| Authors: 
 |     Jonathan E. Gordon$^{1}$, Alexander Harding Bradley$^{1}$, Priyan Rajamohan$^{1}$, Nathaniel Hahn$^{1}$, Kiefer Lin$^{1}$, 
 |     Arafath Nihar$^{1}$, Hayden Cadwell$^{1}$, Jiana Kambo$^{1}$, Jayvic Jimenez$^{1}$, Kristen J. Hernandez$^{1}$, Hein Htet Aung$^{1}$, 
 |     Brian Giera$^{2}$, Weiqi Yu$^{1}$, Mohommad Redad Mehdi$^{1}$, Finley Holt$^{1}$, Quynh Tran$^{1}$, Gabriel Ponon$^{1}$, 
@@ -35,7 +45,3 @@ Please see the LICENSE.txt file, in the root of this repository, for further det
 | $^{2}$ Lawrence Livermore National Laboratory, Livermore, CA 94551, USA
 | $^{3}$ Los Alamos National Laboratory, Los Alamos, NM 87545, USA
 | $^{4}$ University of Central Florida, Materials Science & Engineering, Orlando, FL 32816, USA
-
-
-[^1]: [FAIR CSV Template](https://docs.google.com/spreadsheets/d/1k7gFRc1Yslc-m65aWfFCxqk5UtrKZl9c3GyEFQvLSFU/edit?usp=sharing)
-[^2]: [BSD-3-Clause](https://cran.r-project.org/web/licenses/BSD_3_clause)
