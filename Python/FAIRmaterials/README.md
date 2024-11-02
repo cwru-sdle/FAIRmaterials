@@ -1,39 +1,19 @@
----
-title: "FAIRmaterials"
----
+# FAIRmaterials
 
-| Authors: 
-|     Jonathan E. Gordon$^{1}$, Alexander Harding Bradley$^{1}$, Priyan Rajamohan$^{1}$, Nathaniel Hahn$^{1}$, Kiefer Lin$^{1}$, 
-|     Arafath Nihar$^{1}$, Hayden Cadwell$^{1}$, Jiana Kambo$^{1}$, Jayvic Jimenez$^{1}$, Kristen J. Hernandez$^{1}$, Hein Htet Aung$^{1}$, 
-|     Brian Giera$^{2}$, Weiqi Yu$^{1}$, Mohommad Redad Mehdi$^{1}$, Finley Holt$^{1}$, Quynh Tran$^{1}$, Gabriel Ponon$^{1}$, 
-|     Dan Savage$^{3}$, Don Brown$^{3}$, Jarod Kaltenbaugh$^{4}$, Kush Havinal$^{4}$, Nicholas Gray$^{4}$, Max Ligget$^{1}$,
-|     Benjamin G. Pierce$^{1}$, Raymond Wieser$^{1}$, Yangxin Fan$^{1}$, Tommy Ciardi$^{1}$, Olatunde J. Akanbi$^{1}$, Hadiza Iawal$^{1}$,
-|     Will Oltjen$^{1}$, Maliesha Kalutotage$^{1}$, Antony Lino$^{1}$, Van Tran$^{1}$, Mingjian Lu$^{1}$, Xuanji Yu$^{1}$,
-|     Abhishek Daundkar$^{1}$, Hope Omodolor$^{1}$, Mirra Rasmussen$^{1}$, Sameera Nalin-Venkat$^{1}$, Tian Wang$^{1}$,
-|     Rounak Chawla$^{1}$, Liangyi Huang$^{1}$, Zelin Li$^{1}$, Leean Jo$^{1}$, Jeffrey M. Yarus$^{1}$, Mengjie Li$^{4}$,
-|     Kristopher O. Davis$^{4}$,  Yinghui Wu$^{1}$, Pawan K. Tripathi$^{1}$, Laura S. Bruckman$^{1}$, Erika I. Barcelos$^{1}$, 
-|     Roger H. French$^{1}$
-|
-| $^{1}$ Materials Data Science for Stockpile Stewardship Center of Excellence, Cleveland, OH 44106, USA
-| $^{2}$ Lawrence Livermore National Laboratory, Livermore, CA 94551, USA
-| $^{3}$ Los Alamos National Laboratory, Los Alamos, NM 87545, USA
-| $^{4}$ University of Central Florida, Materials Science & Engineering, Orlando, FL 32816, USA
-  
-<br>
-  
-# What is FAIRmaterials and what does it do?
+## What is FAIRmaterials and what does it do?
 
-'FAIRmaterials' is a bilingual package in R and Python that translates several CSV files from the template (described below) with ontological terms and corresponding data into RDF triples. These RDF triples are then stored in OWL and JSON-LD files, facilitating data accessibility, interoperability, and knowledge unification. The triples are also visualized in a graph saved as an SVG or as a PNG with the Python package. The Python package has a fourth output too. It generates documentation for the output ontology as an HTML. 
+'FAIRmaterials' is a bilingual package in R and Python that translates several CSV files from the template (described below) with ontological terms and corresponding data into RDF triples. These RDF triples are then stored in OWL and JSON-LD files, facilitating data accessibility, interoperability, and knowledge unification. The triples are also visualized in a graph saved as an SVG or as a PNG with the Python package. The Python package has a fourth output too. It generates documentation for the output ontology as an HTML.
 
-Put the sheets, created from the template described below, for one or more ontologies in a folder and the 'FAIRmaterials' 'process_ontology_files' or 'FAIRSheetParser' function will output a JSON-LD, turtle/OWL, SVG/PNG visualization, and HTML documentaion into the input folder for all the input ontologies merged. Note that a folder containing only files for one ontology will give results for just that ontology and specifying a base uri is required for merging ontologies. The package can handle subdirectories by producing separate unmerged outputs for each subdirectory and a merged output from all files in the input path. This tool, developed for use by the SDLE Research Center at Case Western Reserve University, facilitates the creation and visualization of material science ontologies.
+Put the sheets, created from the template (described below), for one or more ontologies in a folder and the 'FAIRmaterials' 'process_ontology_files' or 'FAIRSheetParser' function will output a JSON-LD, turtle/OWL, SVG/PNG visualization, and HTML documentation into the input folder for all the input ontologies merged. Note that a folder containing only files for one ontology will give results for just that ontology and specifying a base uri is required for merging ontologies. The package can handle subdirectories by producing separate unmerged outputs for each subdirectory and a merged output from all files in the input path. This tool, developed for use by the SDLE Research Center at Case Western Reserve University, facilitates the creation and visualization of material science ontologies.
 
-<br><br><br>
+## How to use the FAIR CSV template
 
-# How to use FAIR CSV template:
+To prepare your CSV file, ensure your CSV file contains the appropriate ontological terms and corresponding data using this template: [FAIR CSV Template](https://docs.google.com/spreadsheets/d/1k7gFRc1Yslc-m65aWfFCxqk5UtrKZl9c3GyEFQvLSFU/edit?usp=sharing)
 
-To Prepare your CSV file, ensure your CSV file contains the appropriate ontological terms and corresponding data using this template: [FAIR CSV Template](https://docs.google.com/spreadsheets/d/1k7gFRc1Yslc-m65aWfFCxqk5UtrKZl9c3GyEFQvLSFU/edit?usp=sharing)
+The template has documention on its use. The descriptions under the column names provide instructions for how to fill out each column. Once the Name Space, Value Type Definitions, Relationship Definitions, Variable Definitions, and Ontology Info sheets are filled out, 'FAIRmaterials' is ready to use. The visualizations generated by this package are helpful to visualize an ontology to ensure satisfaction with the information in the sheets.
 
-## Example of XRay ontology FAIR CSV sheet 
+### Example of XRay ontology FAIR CSV sheet
+
 Example Name Space Sheet:
 ![Name Space Sheet](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/namespacesheet.png?raw=true)
 
@@ -51,11 +31,10 @@ Example Value Type Definitions Sheet:
 
 The descriptions under the column names provide instructions for how to fill out each column. Once the Name Space, Value Type Definitions, Relationship Definitions, Variable Definitions, and Ontology Info sheets are filled out, 'FAIRmaterials' is ready to use. The visualizations generated by this package are helpful to visualize an ontology to ensure satisfaction with the information in the sheets.
 
-<br><br><br>
-
-# Install and load the package
+## Install and load the package
 
 Install in R:
+
 ```r
 install.packages("FAIRmaterials")
 
@@ -63,17 +42,17 @@ library(FAIRmaterials)
 ```
 
 Install in Python:
+
 ```{python, eval = FALSE}
 pip install FAIRmaterials
 ```
 
-<br><br><br>
+## Running the default 'process_ontology_files' function
 
-# Running the default 'process_ontology_files' function:
-
-## PV ontology sheets:
+### PV ontology sheets
 
 Running the package in R:
+
 ```r
 # Process the CSV files in the PV folder
 example_folder1 <- system.file("extdata", "PV", package = "FAIRmaterials")
@@ -84,6 +63,7 @@ This visualization from the R package will be saved in the output folder as an S
 ![PV Ontology Visualization](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/PV_svg_w_valuetype.png?raw=true)
 
 Running the package in Python:
+
 ```python
 FAIRmaterials --folder_path /path/to/csv/files --include_graph_valuetype --include_pylode_docs
 ```
@@ -92,12 +72,14 @@ This visualization from the Python package will be saved in the output folder as
 
 ![PV Module Graph Visualization](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/mds-pvModuleGraph.png?raw=true)
 
-### HTML output
-The HTML output generated by the Python package for PV Module can be found [here](https://cwrusdle.bitbucket.io/PylodeHTML/mds-pvModule-pylode.html):
+#### HTML output
 
-## XRay Sample ontology sheets:
+The HTML output generated by the Python package for PV Module can be found [here](https://cwrusdle.bitbucket.io/PylodeHTML/mds-pvModule-pylode.html).
+
+### XRay Sample ontology sheets
 
 Running the package in R:
+
 ```r
 # Process the CSV files in the Xray folder
 example_folder2 <- system.file("extdata", "XRay", package = "FAIRmaterials")
@@ -108,8 +90,8 @@ This visualization from the R package will be saved in the output folder as an S
 
 ![XRay Visualization With Value Types](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/PV_svg_w_valuetype.png?raw=true)
 
-
 Running the package in Python:
+
 ```python
 # Process the CSV files in the Xray folder
 FAIRmaterials --folder_path /path/to/csv/files --include_graph_valuetype --include_pylode_docs
@@ -119,26 +101,26 @@ This visualization from the Python package will be saved in the output folder as
 
 ![XRay Visualization With Value Types](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/mds-XraySampleGraph.png?raw=true)
 
+#### HTML output
 
-### HTML output
-The HTML output generated by the Python package for XRay Sample can be found [here](https://cwrusdle.bitbucket.io/PylodeHTML/mds-XraySample-pylode.html):
+The HTML output generated by the Python package for XRay Sample can be found [here](https://cwrusdle.bitbucket.io/PylodeHTML/mds-XraySample-pylode.html).
 
-<br><br><br>
-
-# Removing values from visualization in R
+## Removing values from visualization in R
 
 By setting include_graph_valuetype argument to FALSE the valuetypes are excluded from graph. We can see how this graph differs from the PV graph above.
 
 Removing values in R:
+
 ```r
 FAIRmaterials::process_ontology_files(example_folder1, include_graph_valuetype = FALSE, add_external_onto_info = FALSE)
 ```
 
-# Removing values from visualization in Python
+## Removing values from visualization in Python
 
 By removing the --include_graph_valuetype flag, the valuetypes are excluded from graph. We can see how this graph differs from the PV graph above.
 
 Removing values in Python:
+
 ```python
 FAIRmaterials --folder_path /path/to/csv/files
 ```
@@ -147,50 +129,52 @@ This visualization from the Python package will be saved in the output folder as
 
 ![XRay Visualization With without Types](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/mds-XraySampleGraph-novaluetype.png?raw=true)
 
-  
-<br><br><br>
-  
-# Attempting to add external ontology information in R:
+## Attempting to add external ontology information in R
 
 Now we set the add_external_onto_info argument to TRUE. The package attempts to find additional information for every term in the XRay Sample and PV Module data and update the output.
 
-## For PV Module:
+### For PV Module
+
 Adding external ontology information in R:
+
 ```r
 FAIRmaterials::process_ontology_files(example_folder1, include_graph_valuetype = TRUE, add_external_onto_info = TRUE)
 ```
 
-## For XRay Sample:
+### For XRay Sample
 
 Adding external ontology information in R:
+
 ```r
 FAIRmaterials::process_ontology_files(example_folder2, include_graph_valuetype = TRUE, add_external_onto_info = TRUE)
 ```
 
-# Attempting to add external ontology information in Python:
+## Attempting to add external ontology information in Python
 
 Now we include the --add_external_onto_info flag when using the package. The package attempts to find additional information for every term in the XRay Sample and PV Module data and update the output.
 
-## For PV Module:
+### For PV Module
+
 Adding external ontology information in Python:
+
 ```python
 FAIRmaterials --folder_path /path/to/csv/files --include_graph_valuetype --add_external_onto_info
 ```
 
-## For XRay Sample:
+### For XRay Sample
 
 Adding external ontology information in R:
+
 ```r
 FAIRmaterials::process_ontology_files(example_folder2, include_graph_valuetype = TRUE, add_external_onto_info = TRUE)
 ```
 
-<br><br><br>
-
-# Merging two ontologies and specifying some of the metadata:
+## Merging two ontologies and specifying some of the metadata
 
 Lastly we will merge the PV and XRay ontologies. This is accomplished by providing the function a folder path that contains both the PV and XRay ontology sheets. We can also specify some of the metadata included in the outputs.
 
 Merging ontologies in R:
+
 ```r
 example_folder3 <- system.file("extdata", package = "FAIRmaterials")
 FAIRmaterials::process_ontology_files(example_folder3, add_external_onto_info = FALSE, merge_title = "MergedPVandXRay", merge_base_uri = "https://cwrusdle.bitbucket.io/OntologyFilesOwl/Ontology/", merge_version = "1.0")
@@ -202,11 +186,30 @@ This visualization from the R package will be saved in the output folder as an S
 ![Merged Visualization with Value Types](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/merged.png?raw=true)
 
 Merging ontologies in Python:
+
 ```python
 FAIRmaterials --folder_path /path/to/csv/files/ --merge_title MergedPVandXRay --merge_base_uri https://cwrusdle.bitbucket.io/OntologyFilesOwl/Ontology/ --merge_version 1.0
 ```
-We are still working on adding visualization functionality for merged ontologies in Python.
-<br><br><br>
 
-# Acknowledgment:
+We are still working on adding visualization functionality for merged ontologies in Python.
+
+## Acknowledgment
+
 This work was supported by the U.S. Department of Energy’s Office of Energy Efficiency and Renewable Energy (EERE) under Solar Energy Technologies Office (SETO) Agreement Numbers DE-EE0009353 and DE-EE0009347, Department of Energy (National Nuclear Security Administration) under Award Number DE-NA0004104 and Contract number B647887, and U.S. National Science Foundation Award under Award Number 2133576.
+
+| Authors:
+|     Jonathan E. Gordon$^{1}$, Alexander Harding Bradley$^{1}$, Priyan Rajamohan$^{1}$, Nathaniel Hahn$^{1}$, Kiefer Lin$^{1}$,
+|     Arafath Nihar$^{1}$, Hayden Cadwell$^{1}$, Jiana Kambo$^{1}$, Jayvic Jimenez$^{1}$, Kristen J. Hernandez$^{1}$, Hein Htet Aung$^{1}$,
+|     Brian Giera$^{2}$, Weiqi Yu$^{1}$, Mohommad Redad Mehdi$^{1}$, Finley Holt$^{1}$, Quynh Tran$^{1}$, Gabriel Ponon$^{1}$,
+|     Dan Savage$^{3}$, Don Brown$^{3}$, Jarod Kaltenbaugh$^{4}$, Kush Havinal$^{4}$, Nicholas Gray$^{4}$, Max Ligget$^{1}$,
+|     Benjamin G. Pierce$^{1}$, Raymond Wieser$^{1}$, Yangxin Fan$^{1}$, Tommy Ciardi$^{1}$, Olatunde J. Akanbi$^{1}$, Hadiza Iawal$^{1}$,
+|     Will Oltjen$^{1}$, Maliesha Kalutotage$^{1}$, Antony Lino$^{1}$, Van Tran$^{1}$, Mingjian Lu$^{1}$, Xuanji Yu$^{1}$,
+|     Abhishek Daundkar$^{1}$, Hope Omodolor$^{1}$, Mirra Rasmussen$^{1}$, Sameera Nalin-Venkat$^{1}$, Tian Wang$^{1}$,
+|     Rounak Chawla$^{1}$, Liangyi Huang$^{1}$, Zelin Li$^{1}$, Leean Jo$^{1}$, Jeffrey M. Yarus$^{1}$, Mengjie Li$^{4}$,
+|     Kristopher O. Davis$^{4}$,  Yinghui Wu$^{1}$, Pawan K. Tripathi$^{1}$, Laura S. Bruckman$^{1}$, Erika I. Barcelos$^{1}$,
+|     Roger H. French$^{1}$
+|
+| $^{1}$ Materials Data Science for Stockpile Stewardship Center of Excellence, Cleveland, OH 44106, USA
+| $^{2}$ Lawrence Livermore National Laboratory, Livermore, CA 94551, USA
+| $^{3}$ Los Alamos National Laboratory, Los Alamos, NM 87545, USA
+| $^{4}$ University of Central Florida, Materials Science & Engineering, Orlando, FL 32816, USA
