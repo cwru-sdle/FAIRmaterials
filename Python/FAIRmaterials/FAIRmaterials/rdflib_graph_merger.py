@@ -1,4 +1,4 @@
-from rdflib import Graph, Namespace, Literal
+from rdflib import Graph, Namespace, Literal, URIRef
 from rdflib.namespace import RDF, OWL, DCTERMS
 import warnings
 
@@ -53,7 +53,7 @@ class RDFLibGraphMerger:
     def add_ontology_ownership(merged_graph, base_uri, ontology_title, ontology_version, ontology_description):
         """
         Adds ownership metadata to the merged ontology graph.
-
+i
         Args:
             merged_graph (rdflib.Graph): The merged ontology graph.
             base_uri (str): The base URI for the ontology.
@@ -64,14 +64,21 @@ class RDFLibGraphMerger:
         Returns:
             rdflib.Graph: The ontology graph with ownership metadata added.
         """
+
+        ## type checking needs to be added !!!
         if ontology_title is None:
-            ontology_title = "merged_ontology"
+            ontology_title = URIRef("merged_ontology")
         if base_uri is None:
             base_uri = "https://mergedontology#"
         if ontology_version is None:
             ontology_version = "1.0"
         if ontology_description is None:
             ontology_description = "This is the merged ontology of all the input sheets"
+        
+
+        if not isinstance(ontology_title, URIRef):
+            ontology_title = URIRef(ontology_title)
+        
 
         ontology_namespace = Namespace(base_uri)
         merged_graph.bind(ontology_title, ontology_namespace)

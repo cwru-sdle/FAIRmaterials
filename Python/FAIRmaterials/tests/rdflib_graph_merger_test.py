@@ -1,5 +1,6 @@
+from re import A
 import pytest
-from rdflib import Graph, Literal
+from rdflib import Graph, Literal, URIRef
 from rdflib.namespace import RDF, OWL, DCTERMS
 from FAIRmaterials.rdflib_graph_merger import RDFLibGraphMerger
 
@@ -36,9 +37,9 @@ def test_add_ontology_ownership(ontology_one):
     
     merged_graph = RDFLibGraphMerger.add_ontology_ownership(ontology_one, base_uri, ontology_title, ontology_version, ontology_description)
 
-    ontology_namespace = base_uri + "Ontology"
+    ontology_namespace = URIRef(base_uri + "Ontology")  ## needs to be cast to a URIRef, may want to add better handling for this
     
-    # Check if the ontology metadata is added
+    # Check if the ontology metadata is added -- these are failing
     assert (ontology_namespace, RDF.type, OWL.Ontology) in merged_graph
     assert (ontology_namespace, DCTERMS.title, Literal(ontology_title)) in merged_graph
     assert (ontology_namespace, DCTERMS.hasVersion, Literal(ontology_version)) in merged_graph
