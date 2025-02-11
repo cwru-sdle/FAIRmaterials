@@ -44,11 +44,13 @@ class FairSheetParser:
             rdflib_graph (rdflib.Graph): An empty rdflib graph
             graphviz_graph (graphviz.Digraph): An empty graphviz graph
         """
-        ontology_info_path = next(iter(glob.glob(folder_path + "*- OntologyInfo.csv")))
-        obj_property_path = next(iter(glob.glob(folder_path + "*- RelationshipDefinitions.csv")))
-        data_property_path = next(iter(glob.glob(folder_path + "*- ValueTypeDefinitions.csv")))
-        namespace_path = next(iter(glob.glob(folder_path + "*- NameSpace.csv")))
-        entity_path = next(iter(glob.glob(folder_path + "*- VariableDefinitions.csv")))
+
+        ## create real pathes to find csv files
+        ontology_info_path = next(iter(glob.glob(os.path.join(folder_path,  "*- OntologyInfo.csv"))))
+        obj_property_path = next(iter(glob.glob(os.path.join(folder_path,  "*- RelationshipDefinitions.csv"))))
+        data_property_path = next(iter(glob.glob(os.path.join(folder_path, "*- ValueTypeDefinitions.csv"))))
+        namespace_path = next(iter(glob.glob(os.path.join(folder_path, "*- NameSpace.csv"))))
+        entity_path = next(iter(glob.glob(os.path.join(folder_path,  "*- VariableDefinitions.csv"))))
         self.__ontology_info_path = ontology_info_path
         self.__obj_property_path = obj_property_path
         self.__data_property_path = data_property_path

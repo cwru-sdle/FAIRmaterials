@@ -24,7 +24,14 @@ class RDFLibGraphSaver:
 
         Returns:
             str: The file path of the saved OWL file.
+
+        Raises:
+            ValueError: RDF graph is empty.
         """
+        
+        ## add in null graph checking
+        if len(self.__rdflib_graph) == 0:
+            raise ValueError("The RDF graph is empty.")
         # Define the folder name
         output_folder = f"{self.__ontology_name}_output"
         
@@ -33,7 +40,7 @@ class RDFLibGraphSaver:
             os.makedirs(output_folder)
         
         # Define the file path within the folder
-        file_path = os.path.join(output_folder, f"{self.__ontology_name}.owl")
+        file_path = os.path.join(output_folder, f"{self.__ontology_name}.ttl") # change to ttl to follow testing expectations
         
         # Write the RDFLib graph to the file in TTL format
         with open(file_path, "wb") as f:
@@ -47,7 +54,15 @@ class RDFLibGraphSaver:
 
         Returns:
             str: The file path of the saved JSON-LD file.
+
+        Raises:
+            ValueError: RDF Graph is empty.
         """
+
+        ## add in null graph checking
+        if len(self.__rdflib_graph) == 0:
+            raise ValueError("The RDF graph is empty.")
+
         def rdf_namespaces_to_json_ld_context(graph):
             json_ld_context = {}
             for prefix, namespace in graph.namespaces():
@@ -77,7 +92,7 @@ class RDFLibGraphSaver:
         Saves the Graphviz graph to a PNG file.
 
         Raises:
-            graphviz.exceptions.GraphvizError: If the graph is empty and cannot be printed.
+            graphviz.backend.ExecutableNotFound: If the graph is empty and cannot be printed.
         """
         output_folder = f"{self.__ontology_name}_output"
         
@@ -85,7 +100,7 @@ class RDFLibGraphSaver:
             os.makedirs(output_folder)
 
         if len(self.__graphviz_graph.body) == 0:
-            raise graphviz.exceptions.GraphvizError("The graph is empty and cannot be printed")
+            raise graphviz.backend.ExecutableNotFound("The graph is empty and cannot be printed")
         else:
             file_path = os.path.join(output_folder, f"{self.__ontology_name}Graph")
             self.__graphviz_graph.render(file_path, format="png", cleanup=True)
@@ -97,10 +112,17 @@ class RDFLibGraphSaver:
 
             Returns:
                 str: The file path of the generated HTML file.
+
+            Raises:
+                ValueError: If the graph is empty and cannot be parsed by VocPub()
             """
             with tempfile.NamedTemporaryFile(delete=False, suffix='.ttl') as temp_file:
                 self.__rdflib_graph.serialize(destination=temp_file, format='turtle')
                 temp_file_path = temp_file.name
+
+            
+            if len(self.__graphviz_graph.body) == 0:
+                raise ValueError("Graph is empty")
 
             op = VocPub(ontology=temp_file_path)
 
