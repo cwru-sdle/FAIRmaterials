@@ -1,0 +1,233 @@
+{
+  "@context": {
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "mds-XraySample": "https://cwrusdle.bitbucket.io/xraySample#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "pmd": "https://w3id.org/pmd/co/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qudt": "http://qudt.org/2.1/vocab/unit#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "mds-XraySample:Ontology",
+      "@type": "owl:Ontology",
+      "dcterms:creator": [
+        "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Mohammad Redad Mehdi",
+        "Weiqi Yue",
+        "Finley Holt",
+        "Pawan K. Tripathi",
+        "Erika I. Barcelos",
+        "Matthew Willard",
+        "Frank Ernst",
+        "Roger H. French"
+      ],
+      "dcterms:description": "XRD Sample Ontology for the FAST Beamline at CHESS",
+      "dcterms:title": "mds-XraySample",
+      "owl:versionInfo": "0.2",
+      "rdfs:label": "mds-XraySample"
+    },
+    {
+      "@id": "pmd:Width",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": "Width",
+      "skos:altLabel": "",
+      "skos:definition": "Width of the sample"
+    },
+    {
+      "@id": "pmd:value",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "mds-XraySample:SampleID"
+        },
+        {
+          "@id": "mds-XraySample:ProcessingMethod"
+        },
+        {
+          "@id": "mds-XraySample:MaterialName"
+        },
+        {
+          "@id": "pmd:Length"
+        },
+        {
+          "@id": "pmd:Width"
+        },
+        {
+          "@id": "pmd:Thickness"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:float"
+        }
+      ]
+    },
+    {
+      "@id": "pmd:Thickness",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": "Thickness",
+      "skos:altLabel": "",
+      "skos:definition": "Thickness of the sample"
+    },
+    {
+      "@id": "mds-XraySample:XrayTool",
+      "@type": "owl:Class",
+      "rdfs:label": "XrayTool",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:hasIdentifier",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XraySample:XraySample"
+      },
+      "rdfs:range": {
+        "@id": "mds-XraySample:SampleID"
+      }
+    },
+    {
+      "@id": "pmd:inputOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XraySample:XraySample"
+      },
+      "rdfs:range": {
+        "@id": "mds-XraySample:XrayTool"
+      }
+    },
+    {
+      "@id": "mds-XraySample:XraySample",
+      "@type": "owl:Class",
+      "rdfs:label": "XraySample",
+      "rdfs:subClassOf": {
+        "@id": "pmd:Sample"
+      },
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:ManufacturingProcess",
+      "@type": "owl:Class",
+      "rdfs:label": "ManufacturingProcess",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:MaterialDesignation",
+      "@type": "owl:Class",
+      "rdfs:label": "MaterialDesignation",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XraySample:ProcessingMethod",
+      "@type": "owl:Class",
+      "rdfs:label": "ProcessingMethod",
+      "rdfs:subClassOf": {
+        "@id": "pmd:ManufacturingProcess"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The manufacturing process by which the sample was created"
+    },
+    {
+      "@id": "pmd:characteristicOf",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "mds-XraySample:XraySample"
+      },
+      "rdfs:range": [
+        {
+          "@id": "mds-XraySample:ProcessingMethod"
+        },
+        {
+          "@id": "mds-XraySample:MaterialName"
+        },
+        {
+          "@id": "pmd:Length"
+        },
+        {
+          "@id": "pmd:Width"
+        },
+        {
+          "@id": "pmd:Thickness"
+        }
+      ]
+    },
+    {
+      "@id": "pmd:Length",
+      "@type": "owl:Class",
+      "pmd:unit": {
+        "@id": "qudt:MilliM"
+      },
+      "rdfs:label": "Length",
+      "skos:altLabel": "",
+      "skos:definition": "Length of the sample"
+    },
+    {
+      "@id": "pmd:SpecimenName",
+      "@type": "owl:Class",
+      "rdfs:label": "SpecimenName",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmd:Sample",
+      "@type": "owl:Class",
+      "rdfs:label": "Sample",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "mds-XraySample:MaterialName",
+      "@type": "owl:Class",
+      "rdfs:label": "MaterialName",
+      "rdfs:subClassOf": {
+        "@id": "pmd:MaterialDesignation"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Name of the material"
+    },
+    {
+      "@id": "mds-XraySample:SampleID",
+      "@type": "owl:Class",
+      "rdfs:label": "SampleID",
+      "rdfs:subClassOf": {
+        "@id": "pmd:SpecimenName"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "A human-labeled sample identifier"
+    }
+  ]
+}
