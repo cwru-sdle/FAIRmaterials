@@ -16,4 +16,4 @@ We added functions for renaming data and for shortening the output of FAIRified 
 
 We're excited to announce a significant redesign in the 'FAIRmaterials' package! The updated tool now seamlessly translates ontological terms and corresponding data from CSV files—accessible via our new template [here][1]. The RDF triples generated are efficiently stored in OWL and JSON-LD formats, along with enhanced visualization capabilities. This update facilitates data accessibility, interoperability, and knowledge unification and ensures a simplified process for the creation of ontologies.
 
-[1]: https://docs.google.com/spreadsheets/d/1k7gFRc1Yslc-m65aWfFCxqk5UtrKZl9c3GyEFQvLSFU/edit?usp=sharing "FAIR CSV Template"
+[1]: https://github.com/cwru-sdle/FAIRmaterials/tree/main/FAIRSheetTemplates "FAIR CSV Template"

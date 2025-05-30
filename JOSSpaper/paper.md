@@ -20,7 +20,10 @@ authors:
 - name: Balashanmuga Priyan Rajamohan
   affiliation: 2, 3
   orcid: "0009-0003-5326-1706"
-- name: Kiefer Li
+- name: Van D. Tran
+  affiliation: 1, 3
+  orcid: "0009-0008-4355-0543"
+- name: Kiefer Lin
   affiliation: 2, 3
 - name: Hayden Caldwell
   affiliation: 2, 3
@@ -74,7 +77,7 @@ Unfortunately, the complexity of the interface is a barrier for those who have l
 This complexity prevents many researchers from creating and integrating ontologies with their own datasets entirely.
 Therefore, there is a need for a tool that can create ontologies with an interface that is easily understandable and provides ample documentation on how to use it.
 `FAIRmaterials` seeks to lower the barrier of entry for scientists entering the world of ontology development and evolution.
-The package provides a baseline CSV ontology template with built-in and easy-to-follow instructions on how to design an ontology which can be found [here](https://docs.google.com/spreadsheets/d/1k7gFRc1Yslc-m65aWfFCxqk5UtrKZl9c3GyEFQvLSFU/edit?gid=1078491905#gid=1078491905). 
+The package provides a baseline CSV ontology template with built-in and easy-to-follow instructions on how to design an ontology which can be found [here](https://github.com/cwru-sdle/FAIRmaterials/tree/main/FAIRSheetTemplates). 
 Preliminary applications of the package in additive manufacturing [@FAIRcite1] and PV systems [@Nihar2021] suggest that `FAIRmaterials` offers valuable capabilities for researchers.
 
 ![Empty Variable CSV Template Sheet for the `FAIRmaterials` Package. The CSV template sheet includes specific instructions on how to fill out every row to correctly generate the ontology. Template is split in half for readability.\label{fig:Variable_Sheet_Template_CSV}](Variable_Sheet_Template_CSV.png){width="100%"}
