@@ -128,7 +128,7 @@ def test_init(create_test_files):
 
 
     # Act
-    parser = FairSheetParser(ontology_sheet_folder, include_graph_valuetype, rdflib_graph, graphviz_graph, add_external_onto_info)
+    parser = FairSheetParser(ontology_sheet_folder, "", include_graph_valuetype, rdflib_graph, graphviz_graph, add_external_onto_info)
     # print(parser.get_namespace_uris())
 
     # Assert

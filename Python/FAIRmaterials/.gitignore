@@ -1,3 +1,6 @@
+empty_ontology_output/
+test_ontology_output/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

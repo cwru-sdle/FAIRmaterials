@@ -1,4 +1,5 @@
 import argparse
+from pathlib import Path
 from rdflib import Graph as rdfGraph
 import graphviz
 from FAIRmaterials.fair_sheet_parser import FairSheetParser
@@ -40,7 +41,7 @@ def main():
     parser = argparse.ArgumentParser()
 
     # Add arguments
-    parser.add_argument('--folder_path', help='Folder where the FAIRSheetInput csv files are located', required=True)
+    parser.add_argument('--folder_path', help='Folder where the FAIRSheetInput csv files are located', required=True, type=Path)
     parser.add_argument('--include_graph_valuetype', help="User decides whether or not the creation of the graphviz graph includes or doesnt include data type properties (Optional)", action="store_true")
     parser.add_argument('--include_pylode_docs', help="User decides whether or not the package also outputs html documentation for the created ontology (Optional)", action="store_true")
     parser.add_argument('--add_external_onto_info', help="Whether to import description and label info from external ontology terms (Optional)", action="store_true")
@@ -64,9 +65,15 @@ def main():
         rdflib_graph = rdfGraph()
         graphviz_graph = graphviz.Digraph(strict=False)
 
-        specific_folder = args.folder_path + "/" + prefix
         # Create FairSheetParser instance
-        fair_sheet_parser = FairSheetParser(specific_folder, args.include_graph_valuetype, rdflib_graph, graphviz_graph, args.add_external_onto_info)
+        fair_sheet_parser = FairSheetParser(
+            folder_path=args.folder_path,
+            prefix=prefix,
+            include_graph_valuetype=args.include_graph_valuetype,
+            rdflib_graph=rdflib_graph,
+            graphviz_graph=graphviz_graph,
+            add_external_onto_info=args.add_external_onto_info,
+        )
 
         rdflib_graph = fair_sheet_parser.get_rdf_graph()
         graphviz_graph = fair_sheet_parser.get_graphviz_graph()
