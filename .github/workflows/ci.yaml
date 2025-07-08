@@ -19,6 +19,11 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install Graphviz system dependency
+        run: |
+          sudo apt-get update
+          sudo apt-get install graphviz
+
       - name: Install dependencies
         working-directory: Python/FAIRmaterials
         run: |
