@@ -1,5 +1,6 @@
 empty_ontology_output/
 test_ontology_output/
+htmlcov/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
