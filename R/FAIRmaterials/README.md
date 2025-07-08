@@ -41,11 +41,6 @@ install.packages("FAIRmaterials")
 library(FAIRmaterials)
 ```
 
-Install in Python:
-
-```{python, eval = FALSE}
-pip install FAIRmaterials
-```
 
 ## Running the default 'process_ontology_files' function
 
@@ -62,15 +57,6 @@ FAIRmaterials::process_ontology_files(example_folder1, add_external_onto_info = 
 This visualization from the R package will be saved in the output folder as an SVG:
 ![PV Ontology Visualization](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/PV_svg_w_valuetype.png?raw=true)
 
-Running the package in Python:
-
-```python
-FAIRmaterials --folder_path /path/to/csv/files --include_graph_valuetype --include_pylode_docs
-```
-
-This visualization from the Python package will be saved in the output folder as an PNG:
-
-![PV Module Graph Visualization](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/mds-pvModuleGraph.png?raw=true)
 
 #### HTML output
 
@@ -90,16 +76,6 @@ This visualization from the R package will be saved in the output folder as an S
 
 ![XRay Visualization With Value Types](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/PV_svg_w_valuetype.png?raw=true)
 
-Running the package in Python:
-
-```python
-# Process the CSV files in the Xray folder
-FAIRmaterials --folder_path /path/to/csv/files --include_graph_valuetype --include_pylode_docs
-```
-
-This visualization from the Python package will be saved in the output folder as an PNG:
-
-![XRay Visualization With Value Types](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/mds-XraySampleGraph.png?raw=true)
 
 #### HTML output
 
@@ -115,19 +91,7 @@ Removing values in R:
 FAIRmaterials::process_ontology_files(example_folder1, include_graph_valuetype = FALSE, add_external_onto_info = FALSE)
 ```
 
-## Removing values from visualization in Python
 
-By removing the --include_graph_valuetype flag, the valuetypes are excluded from graph. We can see how this graph differs from the PV graph above.
-
-Removing values in Python:
-
-```python
-FAIRmaterials --folder_path /path/to/csv/files
-```
-
-This visualization from the Python package will be saved in the output folder as a PNG:
-
-![XRay Visualization With without Types](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/mds-XraySampleGraph-novaluetype.png?raw=true)
 
 ## Attempting to add external ontology information in R
 
@@ -149,25 +113,7 @@ Adding external ontology information in R:
 FAIRmaterials::process_ontology_files(example_folder2, include_graph_valuetype = TRUE, add_external_onto_info = TRUE)
 ```
 
-## Attempting to add external ontology information in Python
 
-Now we include the --add_external_onto_info flag when using the package. The package attempts to find additional information for every term in the XRay Sample and PV Module data and update the output.
-
-### For PV Module
-
-Adding external ontology information in Python:
-
-```python
-FAIRmaterials --folder_path /path/to/csv/files --include_graph_valuetype --add_external_onto_info
-```
-
-### For XRay Sample
-
-Adding external ontology information in R:
-
-```r
-FAIRmaterials::process_ontology_files(example_folder2, include_graph_valuetype = TRUE, add_external_onto_info = TRUE)
-```
 
 ## Merging two ontologies and specifying some of the metadata
 
@@ -185,13 +131,6 @@ This visualization from the R package will be saved in the output folder as an S
 
 ![Merged Visualization with Value Types](https://github.com/cwru-sdle/FAIRmaterials/blob/main/Python/FAIRmaterials/merged.png?raw=true)
 
-Merging ontologies in Python:
-
-```python
-FAIRmaterials --folder_path /path/to/csv/files/ --merge_title MergedPVandXRay --merge_base_uri https://cwrusdle.bitbucket.io/OntologyFilesOwl/Ontology/ --merge_version 1.0
-```
-
-We are still working on adding visualization functionality for merged ontologies in Python.
 
 ## Acknowledgment
 
