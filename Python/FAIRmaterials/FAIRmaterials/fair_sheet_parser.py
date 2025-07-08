@@ -3,7 +3,6 @@ from rdflib.namespace import RDF, RDFS, SKOS, DCTERMS
 import csv
 from collections import defaultdict
 import re
-import glob
 from pathlib import Path
 import zipfile
 import os
@@ -14,11 +13,11 @@ class FairSheetParser:
     A class to parse FAIR ontology sheets and create a corresponding RDFLib graph.
 
     Attributes:
-        __ontology_info_path (str): Path to the ontology information CSV file that the user fills out.
-        __obj_property_path (str): Path to the object property CSV file that the user fills out.
-        __data_property_path (str): Path to the data property CSV file that the user fills out.
-        __namespace_path (str): Path to the namespace CSV file that the user fills out.
-        __entity_path (str): Path to the entity CSV file that the user fills out.
+        __ontology_info_path (pathlib.Path): Path to the ontology information CSV file that the user fills out.
+        __obj_property_path (pathlib.Path): Path to the object property CSV file that the user fills out.
+        __data_property_path (pathlib.Path): Path to the data property CSV file that the user fills out.
+        __namespace_path (pathlib.Path): Path to the namespace CSV file that the user fills out.
+        __entity_path (pathlib.Path): Path to the entity CSV file that the user fills out.
         __datatype_conversions (dict): Dictionary for datatype conversions of strings to XSD objects.
         __rdflib_graph (rdflib.Graph): an RDFLib graph that will contain all information about the ontology.
         __graphviz_graph (graphviz.Digraph): an Graphviz graph that will used to visualize all information about the ontology.
@@ -34,23 +33,24 @@ class FairSheetParser:
         __data_property_uris (dict): Dictionary of data property URIs.
     """
 
-    def __init__(self, folder_path, include_graph_valuetype, rdflib_graph, graphviz_graph, add_external_onto_info):
+    def __init__(self, folder_path: Path, prefix: str, include_graph_valuetype, rdflib_graph, graphviz_graph, add_external_onto_info):
         """
         Initializes the FairSheetParser object with the provided ontology sheet folder and populates the RDFLib graph and Graphviz PNG using the information provided in these sheets.
 
         Args:
-            folder_path (str): The folder containing ontology CSV files.
+            folder_path (pathlib.Path): The folder containing ontology CSV files.
+            prefix (str): The prefix for a set of ontology CSV files.
             include_graph_valuetype (bool): Flag to include valuetype and unit edges in the Graphviz png.
             rdflib_graph (rdflib.Graph): An empty rdflib graph
             graphviz_graph (graphviz.Digraph): An empty graphviz graph
         """
 
         ## create real pathes to find csv files
-        ontology_info_path = next(iter(glob.glob(os.path.join(folder_path,  "*- OntologyInfo.csv"))))
-        obj_property_path = next(iter(glob.glob(os.path.join(folder_path,  "*- RelationshipDefinitions.csv"))))
-        data_property_path = next(iter(glob.glob(os.path.join(folder_path, "*- ValueTypeDefinitions.csv"))))
-        namespace_path = next(iter(glob.glob(os.path.join(folder_path, "*- NameSpace.csv"))))
-        entity_path = next(iter(glob.glob(os.path.join(folder_path,  "*- VariableDefinitions.csv"))))
+        ontology_info_path = folder_path / f"{prefix}- OntologyInfo.csv"
+        obj_property_path = folder_path / f"{prefix}- RelationshipDefinitions.csv"
+        data_property_path = folder_path / f"{prefix}- ValueTypeDefinitions.csv"
+        namespace_path = folder_path / f"{prefix}- NameSpace.csv"
+        entity_path = folder_path / f"{prefix}- VariableDefinitions.csv"
         self.__ontology_info_path = ontology_info_path
         self.__obj_property_path = obj_property_path
         self.__data_property_path = data_property_path
