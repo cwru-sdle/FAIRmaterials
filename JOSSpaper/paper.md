@@ -74,14 +74,18 @@ Its additional features, such as automated ontology merging, static visualizatio
 
 # Statement of need
 
-`Protege` is currently the most widely-used open-source tool for ontology creation and development.
+`Protege` [@Protege] is currently the most widely-used open-source tool for ontology creation and development.
 Its main capabilities include manually creating and editing ontological terms and relationships, visualizing ontologies, checking the logical consistency of ontologies, and querying ontologies for specific information.
 Unfortunately, the complexity of the interface is a barrier for those who have little experience with ontology creation.
+Another well-known software is `Owlready2` [@Owlready2], a package for manipulating ontologies in Python. This package allows for manipulation of classes, instances, and annotations, as well as reasoning using a HermiT reasoner [@HermiT].
+However, like `Protege`, `Owlready2` is complex to use, requiring users to have extensive knowledge about OWL and Description Logics [@OWL].
 This complexity prevents many researchers from creating and integrating ontologies with their own datasets entirely.
 Therefore, there is a need for a tool that can create ontologies with an interface that is easily understandable and provides ample documentation on how to use it.
 `FAIRmaterials` seeks to lower the barrier of entry for scientists entering the world of ontology development and evolution.
 The package provides a baseline CSV ontology template with built-in and easy-to-follow instructions on how to design an ontology which can be found [here](https://github.com/cwru-sdle/FAIRmaterials/tree/main/FAIRSheetTemplates). 
 Preliminary applications of the package in additive manufacturing [@FAIRcite1] and PV systems [@Nihar2021] suggest that `FAIRmaterials` offers valuable capabilities for researchers.
+
+
 
 ![Empty Variable CSV Template Sheet for the `FAIRmaterials` Package. The CSV template sheet includes specific instructions on how to fill out every row to correctly generate the ontology. Template is split in half for readability.\label{fig:Variable_Sheet_Template_CSV}](Variable_Sheet_Template_CSV.png){width="100%"}
 
