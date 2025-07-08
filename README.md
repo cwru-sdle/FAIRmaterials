@@ -28,7 +28,7 @@ The template has documention on its use. The descriptions under the column names
 
 ## Location of worked example for XRD Sample Ontology
 
-The location of the XRD worked example can be found ![here](https://github.com/cwru-sdle/FAIRmaterials/tree/main/worked-Example-XRaySample).
+The location of the XRD worked example can be found [here](https://github.com/cwru-sdle/FAIRmaterials/tree/main/worked-Example-XRaySample).
 
 ### Example of XRay ontology FAIR CSV sheet
 
