@@ -1,0 +1,219 @@
+@prefix PVModuleOntology: <https://cwrusdle.bitbucket.io/PVModuleOntology/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pmdco: <https://w3id.org/pmd/co/> .
+@prefix qudt: <http://qudt.org/2.1/vocab/unit#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+PVModuleOntology:Ontology a owl:Ontology ;
+    rdfs:label "PVModuleOntology" ;
+    dcterms:creator "Alexander C. Harding Bradley",
+        "Arafath Nihar",
+        "Balashanmuga Priyan Rajamohan",
+        """Benjamin
+Pierce""",
+        """Erika
+I. Barcelos""",
+        "Hayden Caldwell",
+        "Jarod Kaltenbaugh",
+        "Jiana Kanbo",
+        "Kiefer Lin",
+        "Kris Davis",
+        "Laura S. Bruckman",
+        "Mengjie Li",
+        "Raymond Wieser",
+        "Roger H. French",
+        "Yinghui Wu" ;
+    dcterms:description "An ontology describing the characteristics of a PV Module." ;
+    dcterms:title "PVModuleOntology" ;
+    owl:versionInfo "0.2" .
+
+pmdco:characteristic a owl:ObjectProperty ;
+    rdfs:domain PVModuleOntology:ProdBacksheet,
+        PVModuleOntology:ProdEncapsulant,
+        PVModuleOntology:ProdModule ;
+    rdfs:range PVModuleOntology:BacksheetColor,
+        PVModuleOntology:BacksheetMaterial,
+        PVModuleOntology:CellCount,
+        PVModuleOntology:EncapsulantMaterial,
+        PVModuleOntology:FluorescencePattern,
+        PVModuleOntology:FrameColor,
+        PVModuleOntology:ModuleEfficiency,
+        PVModuleOntology:PowerSTC,
+        PVModuleOntology:TemperatureNOCT,
+        pmdco:Length,
+        pmdco:Manufacturer,
+        pmdco:NodeSerialNumber,
+        pmdco:Thickness,
+        pmdco:Weight,
+        pmdco:Width .
+
+pmdco:component a owl:ObjectProperty ;
+    rdfs:domain PVModuleOntology:ProdModule ;
+    rdfs:range PVModuleOntology:ProdBacksheet,
+        PVModuleOntology:ProdEncapsulant,
+        PVModuleOntology:ProdJunctionBox .
+
+pmdco:value a owl:DatatypeProperty ;
+    rdfs:domain PVModuleOntology:BacksheetColor,
+        PVModuleOntology:BacksheetMaterial,
+        PVModuleOntology:CellCount,
+        PVModuleOntology:EncapsulantMaterial,
+        PVModuleOntology:FluorescencePattern,
+        PVModuleOntology:FrameColor,
+        PVModuleOntology:ModuleEfficiency,
+        PVModuleOntology:PowerSTC,
+        PVModuleOntology:ProdModuleID,
+        PVModuleOntology:TemperatureNOCT,
+        pmdco:Length,
+        pmdco:Manufacturer,
+        pmdco:Thickness,
+        pmdco:Weight,
+        pmdco:Width ;
+    rdfs:range xsd:float,
+        xsd:integer,
+        xsd:string .
+
+PVModuleOntology:ProdJunctionBox a owl:Class ;
+    rdfs:label "ProdJunctionBox" ;
+    rdfs:subClassOf pmdco:Component ;
+    skos:altLabel "" ;
+    skos:definition "An encapsulant of a photovoltaic module" .
+
+PVModuleOntology:ProdModuleID a owl:Class ;
+    rdfs:label "ProdModuleID" ;
+    rdfs:subClassOf pmdco:NodeSerialNumber ;
+    skos:altLabel "" ;
+    skos:definition "Alphanumeric identifier for the metadata document" .
+
+pmdco:Temperature a owl:Class ;
+    rdfs:label "Temperature" ;
+    skos:altLabel "" .
+
+PVModuleOntology:BacksheetColor a owl:Class ;
+    rdfs:label "BacksheetColor" ;
+    rdfs:subClassOf PVModuleOntology:Color ;
+    skos:altLabel "" ;
+    skos:definition "Color of the backsheet" .
+
+PVModuleOntology:BacksheetMaterial a owl:Class ;
+    rdfs:label "BacksheetMaterial" ;
+    rdfs:subClassOf pmdco:MaterialDesignation ;
+    skos:altLabel "" ;
+    skos:definition "Material the backsheet is made out of" .
+
+PVModuleOntology:CellCount a owl:Class ;
+    rdfs:label "CellCount" ;
+    rdfs:subClassOf pmdco:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "The number of cells in a module" .
+
+PVModuleOntology:Color a owl:Class ;
+    rdfs:label "Color" ;
+    rdfs:subClassOf pmdco:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "the visual perception based on the electromagnetic spectrum" .
+
+PVModuleOntology:EncapsulantMaterial a owl:Class ;
+    rdfs:label "EncapsulantMaterial" ;
+    rdfs:subClassOf pmdco:MaterialDesignation ;
+    skos:altLabel "" ;
+    skos:definition "Material the encapsulant is made out of" .
+
+PVModuleOntology:FluorescencePattern a owl:Class ;
+    rdfs:label "FluorescencePattern" ;
+    rdfs:subClassOf pmdco:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "Pattern of modules under UV Fluorescence (square or ring)" .
+
+PVModuleOntology:FrameColor a owl:Class ;
+    rdfs:label "FrameColor" ;
+    rdfs:subClassOf PVModuleOntology:Color ;
+    skos:altLabel "" ;
+    skos:definition "The color of the module frame" .
+
+PVModuleOntology:ModuleEfficiency a owl:Class ;
+    rdfs:label "ModuleEfficiency" ;
+    rdfs:subClassOf pmdco:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "The efficiency of the solar module at standard test condition (STC)" .
+
+PVModuleOntology:PowerSTC a owl:Class ;
+    rdfs:label "PowerSTC" ;
+    rdfs:subClassOf pmdco:ValueObject ;
+    skos:altLabel "" ;
+    skos:definition "DC power at Standard Test Condition (STC). STC is defined as 1000 W/m2 irradiance, 25C and ASTM G173-03 standard solar spectrum" ;
+    pmdco:unit qudt:KiloW .
+
+PVModuleOntology:ProdBacksheet a owl:Class ;
+    rdfs:label "ProdBacksheet" ;
+    rdfs:subClassOf pmdco:Component ;
+    skos:altLabel "" ;
+    skos:definition "A backsheet of a photovoltaic module" .
+
+PVModuleOntology:ProdEncapsulant a owl:Class ;
+    rdfs:label "ProdEncapsulant" ;
+    rdfs:subClassOf pmdco:Component ;
+    skos:altLabel "" ;
+    skos:definition "An encapsulant of a photovoltaic module" .
+
+PVModuleOntology:ProdModule a owl:Class ;
+    rdfs:label "ProdModule" ;
+    rdfs:subClassOf pmdco:ProcessingNode ;
+    skos:altLabel "" ;
+    skos:definition "A solar module product" .
+
+PVModuleOntology:TemperatureNOCT a owl:Class ;
+    rdfs:label "TemperatureNOCT" ;
+    rdfs:subClassOf pmdco:Temperature ;
+    skos:altLabel "" ;
+    skos:definition "The nominal operating cell temperature (NOCT) of a solar module" ;
+    pmdco:unit qudt:DEG_C .
+
+pmdco:Length a owl:Class ;
+    rdfs:label "Length" ;
+    skos:altLabel "" ;
+    pmdco:unit qudt:CentiM .
+
+pmdco:Manufacturer a owl:Class ;
+    rdfs:label "Manufacturer" ;
+    skos:altLabel "" .
+
+pmdco:MaterialDesignation a owl:Class ;
+    rdfs:label "MaterialDesignation" ;
+    rdfs:subClassOf pmdco:ProcessingNode ;
+    skos:altLabel "" .
+
+pmdco:NodeSerialNumber a owl:Class ;
+    rdfs:label "NodeSerialNumber" ;
+    skos:altLabel "" .
+
+pmdco:ProcessingNode a owl:Class ;
+    rdfs:label "ProcessingNode" ;
+    skos:altLabel "" .
+
+pmdco:Thickness a owl:Class ;
+    rdfs:label "Thickness" ;
+    skos:altLabel "" ;
+    pmdco:unit qudt:CentiM .
+
+pmdco:Weight a owl:Class ;
+    rdfs:label "Weight" ;
+    skos:altLabel "" ;
+    pmdco:unit qudt:KiloGM .
+
+pmdco:Width a owl:Class ;
+    rdfs:label "Width" ;
+    skos:altLabel "" ;
+    pmdco:unit qudt:CentiM .
+
+pmdco:Component a owl:Class ;
+    rdfs:label "Component" ;
+    skos:altLabel "" .
+
+pmdco:ValueObject a owl:Class ;
+    rdfs:label "ValueObject" ;
+    skos:altLabel "" .
+
