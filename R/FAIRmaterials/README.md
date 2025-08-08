@@ -1,5 +1,9 @@
 # FAIRmaterials
 
+## R version
+
+FAIRmaterials R requires R 3.1.1 and up.
+
 ## What is FAIRmaterials and what does it do?
 
 'FAIRmaterials' is a bilingual package in R and Python that translates several CSV files from the template (described below) with ontological terms and corresponding data into RDF triples. These RDF triples are then stored in OWL and JSON-LD files, facilitating data accessibility, interoperability, and knowledge unification. The triples are also visualized in a graph saved as an SVG or as a PNG with the Python package. The Python package has a fourth output too. It generates documentation for the output ontology as an HTML.
