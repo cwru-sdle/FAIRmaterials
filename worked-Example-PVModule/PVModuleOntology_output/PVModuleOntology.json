@@ -1,0 +1,442 @@
+{
+  "@context": {
+    "PVModuleOntology": "https://cwrusdle.bitbucket.io/PVModuleOntology/",
+    "brick": "https://brickschema.org/schema/Brick#",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "dcam": "http://purl.org/dc/dcam/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "dcmitype": "http://purl.org/dc/dcmitype/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "doap": "http://usefulinc.com/ns/doap#",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "geo": "http://www.opengis.net/ont/geosparql#",
+    "odrl": "http://www.w3.org/ns/odrl/2/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "pmdco": "https://w3id.org/pmd/co/",
+    "prof": "http://www.w3.org/ns/dx/prof/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "qb": "http://purl.org/linked-data/cube#",
+    "qudt": "http://qudt.org/2.1/vocab/unit#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "sosa": "http://www.w3.org/ns/sosa/",
+    "ssn": "http://www.w3.org/ns/ssn/",
+    "time": "http://www.w3.org/2006/time#",
+    "vann": "http://purl.org/vocab/vann/",
+    "void": "http://rdfs.org/ns/void#",
+    "wgs": "https://www.w3.org/2003/01/geo/wgs84_pos#",
+    "xml": "http://www.w3.org/XML/1998/namespace",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "pmdco:ValueObject",
+      "@type": "owl:Class",
+      "rdfs:label": "ValueObject",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmdco:Width",
+      "@type": "owl:Class",
+      "pmdco:unit": {
+        "@id": "qudt:CentiM"
+      },
+      "rdfs:label": "Width",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmdco:value",
+      "@type": "owl:DatatypeProperty",
+      "rdfs:domain": [
+        {
+          "@id": "PVModuleOntology:ProdModuleID"
+        },
+        {
+          "@id": "pmdco:Manufacturer"
+        },
+        {
+          "@id": "PVModuleOntology:CellCount"
+        },
+        {
+          "@id": "PVModuleOntology:FrameColor"
+        },
+        {
+          "@id": "PVModuleOntology:BacksheetColor"
+        },
+        {
+          "@id": "PVModuleOntology:BacksheetMaterial"
+        },
+        {
+          "@id": "PVModuleOntology:EncapsulantMaterial"
+        },
+        {
+          "@id": "pmdco:Length"
+        },
+        {
+          "@id": "pmdco:Width"
+        },
+        {
+          "@id": "pmdco:Thickness"
+        },
+        {
+          "@id": "pmdco:Weight"
+        },
+        {
+          "@id": "PVModuleOntology:ModuleEfficiency"
+        },
+        {
+          "@id": "PVModuleOntology:FluorescencePattern"
+        },
+        {
+          "@id": "PVModuleOntology:PowerSTC"
+        },
+        {
+          "@id": "PVModuleOntology:TemperatureNOCT"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "xsd:integer"
+        },
+        {
+          "@id": "xsd:string"
+        },
+        {
+          "@id": "xsd:float"
+        }
+      ]
+    },
+    {
+      "@id": "pmdco:ProcessingNode",
+      "@type": "owl:Class",
+      "rdfs:label": "ProcessingNode",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "PVModuleOntology:FluorescencePattern",
+      "@type": "owl:Class",
+      "rdfs:label": "FluorescencePattern",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Pattern of modules under UV Fluorescence (square or ring)"
+    },
+    {
+      "@id": "pmdco:Thickness",
+      "@type": "owl:Class",
+      "pmdco:unit": {
+        "@id": "qudt:CentiM"
+      },
+      "rdfs:label": "Thickness",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "PVModuleOntology:PowerSTC",
+      "@type": "owl:Class",
+      "pmdco:unit": {
+        "@id": "qudt:KiloW"
+      },
+      "rdfs:label": "PowerSTC",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "DC power at Standard Test Condition (STC). STC is defined as 1000 W/m2 irradiance, 25C and ASTM G173-03 standard solar spectrum"
+    },
+    {
+      "@id": "pmdco:characteristic",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": [
+        {
+          "@id": "PVModuleOntology:ProdModule"
+        },
+        {
+          "@id": "PVModuleOntology:ProdBacksheet"
+        },
+        {
+          "@id": "PVModuleOntology:ProdEncapsulant"
+        }
+      ],
+      "rdfs:range": [
+        {
+          "@id": "pmdco:NodeSerialNumber"
+        },
+        {
+          "@id": "pmdco:Manufacturer"
+        },
+        {
+          "@id": "PVModuleOntology:CellCount"
+        },
+        {
+          "@id": "PVModuleOntology:FrameColor"
+        },
+        {
+          "@id": "PVModuleOntology:ModuleEfficiency"
+        },
+        {
+          "@id": "PVModuleOntology:FluorescencePattern"
+        },
+        {
+          "@id": "PVModuleOntology:PowerSTC"
+        },
+        {
+          "@id": "PVModuleOntology:TemperatureNOCT"
+        },
+        {
+          "@id": "PVModuleOntology:BacksheetColor"
+        },
+        {
+          "@id": "PVModuleOntology:BacksheetMaterial"
+        },
+        {
+          "@id": "PVModuleOntology:EncapsulantMaterial"
+        },
+        {
+          "@id": "pmdco:Length"
+        },
+        {
+          "@id": "pmdco:Width"
+        },
+        {
+          "@id": "pmdco:Thickness"
+        },
+        {
+          "@id": "pmdco:Weight"
+        }
+      ]
+    },
+    {
+      "@id": "PVModuleOntology:TemperatureNOCT",
+      "@type": "owl:Class",
+      "pmdco:unit": {
+        "@id": "qudt:DEG_C"
+      },
+      "rdfs:label": "TemperatureNOCT",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:Temperature"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The nominal operating cell temperature (NOCT) of a solar module"
+    },
+    {
+      "@id": "PVModuleOntology:ProdEncapsulant",
+      "@type": "owl:Class",
+      "rdfs:label": "ProdEncapsulant",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:Component"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "An encapsulant of a photovoltaic module"
+    },
+    {
+      "@id": "PVModuleOntology:Ontology",
+      "@type": "owl:Ontology",
+      "dcterms:creator": [
+        "Alexander C. Harding Bradley",
+        "Balashanmuga Priyan Rajamohan",
+        "Raymond Wieser",
+        "Benjamin\nPierce",
+        "Jarod Kaltenbaugh",
+        "Hayden Caldwell",
+        "Arafath Nihar",
+        "Kiefer Lin",
+        "Jiana Kanbo",
+        "Mengjie Li",
+        "Kris Davis",
+        "Yinghui Wu",
+        "Laura S. Bruckman",
+        "Erika\nI. Barcelos",
+        "Roger H. French"
+      ],
+      "dcterms:description": "An ontology describing the characteristics of a PV Module.",
+      "dcterms:title": "PVModuleOntology",
+      "owl:versionInfo": "0.2",
+      "rdfs:label": "PVModuleOntology"
+    },
+    {
+      "@id": "pmdco:Component",
+      "@type": "owl:Class",
+      "rdfs:label": "Component",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "PVModuleOntology:ProdBacksheet",
+      "@type": "owl:Class",
+      "rdfs:label": "ProdBacksheet",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:Component"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "A backsheet of a photovoltaic module"
+    },
+    {
+      "@id": "PVModuleOntology:ProdModuleID",
+      "@type": "owl:Class",
+      "rdfs:label": "ProdModuleID",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:NodeSerialNumber"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Alphanumeric identifier for the metadata document"
+    },
+    {
+      "@id": "PVModuleOntology:ModuleEfficiency",
+      "@type": "owl:Class",
+      "rdfs:label": "ModuleEfficiency",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The efficiency of the solar module at standard test condition (STC)"
+    },
+    {
+      "@id": "PVModuleOntology:FrameColor",
+      "@type": "owl:Class",
+      "rdfs:label": "FrameColor",
+      "rdfs:subClassOf": {
+        "@id": "PVModuleOntology:Color"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The color of the module frame"
+    },
+    {
+      "@id": "PVModuleOntology:EncapsulantMaterial",
+      "@type": "owl:Class",
+      "rdfs:label": "EncapsulantMaterial",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:MaterialDesignation"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Material the encapsulant is made out of"
+    },
+    {
+      "@id": "PVModuleOntology:ProdModule",
+      "@type": "owl:Class",
+      "rdfs:label": "ProdModule",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:ProcessingNode"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "A solar module product"
+    },
+    {
+      "@id": "pmdco:Manufacturer",
+      "@type": "owl:Class",
+      "rdfs:label": "Manufacturer",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "PVModuleOntology:ProdJunctionBox",
+      "@type": "owl:Class",
+      "rdfs:label": "ProdJunctionBox",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:Component"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "An encapsulant of a photovoltaic module"
+    },
+    {
+      "@id": "pmdco:component",
+      "@type": "owl:ObjectProperty",
+      "rdfs:domain": {
+        "@id": "PVModuleOntology:ProdModule"
+      },
+      "rdfs:range": [
+        {
+          "@id": "PVModuleOntology:ProdBacksheet"
+        },
+        {
+          "@id": "PVModuleOntology:ProdEncapsulant"
+        },
+        {
+          "@id": "PVModuleOntology:ProdJunctionBox"
+        }
+      ]
+    },
+    {
+      "@id": "PVModuleOntology:BacksheetMaterial",
+      "@type": "owl:Class",
+      "rdfs:label": "BacksheetMaterial",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:MaterialDesignation"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Material the backsheet is made out of"
+    },
+    {
+      "@id": "PVModuleOntology:BacksheetColor",
+      "@type": "owl:Class",
+      "rdfs:label": "BacksheetColor",
+      "rdfs:subClassOf": {
+        "@id": "PVModuleOntology:Color"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "Color of the backsheet"
+    },
+    {
+      "@id": "PVModuleOntology:Color",
+      "@type": "owl:Class",
+      "rdfs:label": "Color",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "the visual perception based on the electromagnetic spectrum"
+    },
+    {
+      "@id": "PVModuleOntology:CellCount",
+      "@type": "owl:Class",
+      "rdfs:label": "CellCount",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:ValueObject"
+      },
+      "skos:altLabel": "",
+      "skos:definition": "The number of cells in a module"
+    },
+    {
+      "@id": "pmdco:Temperature",
+      "@type": "owl:Class",
+      "rdfs:label": "Temperature",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmdco:Weight",
+      "@type": "owl:Class",
+      "pmdco:unit": {
+        "@id": "qudt:KiloGM"
+      },
+      "rdfs:label": "Weight",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmdco:Length",
+      "@type": "owl:Class",
+      "pmdco:unit": {
+        "@id": "qudt:CentiM"
+      },
+      "rdfs:label": "Length",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmdco:NodeSerialNumber",
+      "@type": "owl:Class",
+      "rdfs:label": "NodeSerialNumber",
+      "skos:altLabel": ""
+    },
+    {
+      "@id": "pmdco:MaterialDesignation",
+      "@type": "owl:Class",
+      "rdfs:label": "MaterialDesignation",
+      "rdfs:subClassOf": {
+        "@id": "pmdco:ProcessingNode"
+      },
+      "skos:altLabel": ""
+    }
+  ]
+}

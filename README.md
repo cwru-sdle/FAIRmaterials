@@ -30,6 +30,10 @@ The template has documention on its use. The descriptions under the column names
 
 The location of the XRD worked example can be found [here](https://github.com/cwru-sdle/FAIRmaterials/tree/main/worked-Example-XRaySample).
 
+## Location of worked example for PV Module Ontology
+
+The location of the PV Module worked example can be found [here](https://github.com/cwru-sdle/FAIRmaterials/tree/main/worked-Example-PVModule).
+
 ### Example of XRay ontology FAIR CSV sheet
 
 Example Name Space Sheet:
