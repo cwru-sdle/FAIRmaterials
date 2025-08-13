@@ -2,7 +2,7 @@
 
 ## Python version
 
-FAIRmaterials Python requires Python 3.9.18 and up.
+FAIRmaterials Python requires Python 3.10 and up.
 
 ## What is FAIRmaterials and what does it do?
 
