@@ -55,7 +55,7 @@ The location of the PV Module worked example can be found [here](https://github.
 
 ## Python and R Version
 
-FAIRmaterials Python requires Python 3.9.18 and up and FAIRmaterials R requires R 3.1.1 and up. 
+FAIRmaterials Python requires Python 3.10 and up and FAIRmaterials R requires R 3.1.1 and up. 
 
 ## Install and load the package
 
