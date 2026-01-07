@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='FAIRmaterials',
-    version='0.4.2.6',
+    version='0.4.2.7',
     description='Translates several CSV files with ontological terms and corresponding data into RDF triples. These RDF triples are stored in OWL and JSON-LD files, facilitating data accessibility, interoperability, and knowledge unification. The triples are also visualized in a graph saved as an SVG. The input CSVs must be formatted with a template from a public Google Sheet; see README or vignette for more information. This is a tool used by the SDLE Research Center at Case Western Reserve University.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
