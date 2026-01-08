@@ -23,11 +23,11 @@ authors:
 - name: Van D. Tran
   affiliation: 1, 3
   orcid: "0009-0008-4355-0543"
+- name: Nathaniel Hahn
+  affiliation: 2, 3
 - name: Kiefer Lin
   affiliation: 2, 3
 - name: Hayden Caldwell
-  affiliation: 2, 3
-- name: Nathaniel Hahn
   affiliation: 2, 3
 - name: Arafath Nihar
   affiliation: 2, 3
