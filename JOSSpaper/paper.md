@@ -27,6 +27,8 @@ authors:
   affiliation: 2, 3
 - name: Hayden Caldwell
   affiliation: 2, 3
+- name: Nathaniel Hahn
+  affiliation: 2, 3
 - name: Arafath Nihar
   affiliation: 2, 3
   orcid: "0000-0003-4826-290X"
