@@ -149,15 +149,15 @@ The authors would like to sincerely thank these organizations for their financia
 
 Example full set of completed ontology sheets for the mds-XrayToolChess ontology
 
-![Ontology Info Sheet: Contains essential metadata about the ontology including title, creator, and version. This sheet sets the foundational attributes that describe and contextualize the ontology. \label{fig:ontoinfosheet}](ontoinfosheet3.png)
+![Ontology Info Sheet: Contains essential metadata about the ontology including title, creator, and version. This sheet sets the foundational attributes that describe and contextualize the ontology. \label{fig:ontoinfosheet}](ontoinfosheet3.png){width=150%, height=150%}
 
-![Namespace Sheet: This sheet is used to define the namespace which connects ontology prefixes to the ontology URL. This sheet aids in preventing conflicts and maintaining clarity across the ontology's vocabulary.\label{fig:namespacesheet}](namespacesheet3.png)
+![Namespace Sheet: This sheet is used to define the namespace which connects ontology prefixes to the ontology URL. This sheet aids in preventing conflicts and maintaining clarity across the ontology's vocabulary.\label{fig:namespacesheet}](namespacesheet3.png){width=150%, height=150%}
 
-![Value Type Sheet: Specifies the types of values associated with ontology terms, used for data consistency and semantic accuracy in ontology modeling.\label{fig:valtypesheet}](valtypesheet3.png)
+![Value Type Sheet: Specifies the types of values associated with ontology terms, used for data consistency and semantic accuracy in ontology modeling.\label{fig:valtypesheet}](valtypesheet3.png){width=150%, height=150%}
 
-![Relationship Definition Sheet: Outlines the various relationships between terms within the ontology, facilitating a structured approach to defining how ontology elements interconnect.\label{fig:reldefsheet}](reldefsheet3.png)
+![Relationship Definition Sheet: Outlines the various relationships between terms within the ontology, facilitating a structured approach to defining how ontology elements interconnect.\label{fig:reldefsheet}](reldefsheet3.png){width=150%, height=150%}
 
-![Variable Definition Sheet: This sheet details the individual variables within the ontology, defining their attributes and how they relate to the ontology's broader structure.\label{fig:vardefsheet}](vardefsheet3.png)
+![Variable Definition Sheet: This sheet details the individual variables within the ontology, defining their attributes and how they relate to the ontology's broader structure.\label{fig:vardefsheet}](vardefsheet3.png){width=150%, height=150%}
 
 \newpage
 
