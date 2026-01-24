@@ -109,7 +109,7 @@ For this reason, the package outputs a visualization in both the R and Python ve
 The optional Python flag `include_graph_valuetype` can be used to include value type nodes in the output visualization.
 The visualization is generated using the `Graphviz` [@GraphvizPython] software in the Python version and `DiagrammeR` [@DiagrammeR] in R. Both outputs are modeled after the popular `WebVOWL` [@Webvowl] ontology visualization tool to make it easier for users to inherently understand the color schema and format.
 
-![The X-ray sample ontology. The light-blue icons represent ontology terms, with the prefix (i.e. pmd) indicating the ontology that the term was created in. The dark-blue squared boxes indicate relationships created between entities. The yellow round boxes either indicate the type of the value stored in each subclass or the unit that the value is expressed in, with the prefix indicating the ontology the unit definition belongs to or the schema language that the value type is defined in. \label{fig:x-sample}](mds-XraySampleGraph300.png){height=200%}
+![The X-ray sample ontology. The light-blue icons represent ontology terms, with the prefix (i.e., pmd) indicating the ontology that the term was created in. The dark-blue squared boxes indicate relationships created between entities. The yellow round boxes either indicate the type of the value stored in each subclass or the unit that the value is expressed in, with the prefix indicating the ontology the unit definition belongs to or the schema language that the value type is defined in. \label{fig:x-sample}](mds-XraySampleGraph300.png){height=200%}
 
 ## Ontology merging
 
@@ -124,7 +124,7 @@ The HTML documentation provides an intuitive interface for humans to understand 
 # Typical Usage
 
 It is recommended that users first design an ontology schema that includes all the vocabulary needed to describe a dataset. This ensures explicit connections to the Basic Formal Ontology (BFO) or another top-level ontology, ensuring its interoperability with other existing ontologies. Every variable in the ontology schema should be tagged as a subclass of an already-existing ontology term or it should be a new term. Other top-level terms should be used within the schema when necessary, such as using a QUDT ontology term when associating a certain measurement term with a standardized unit.
-An example of an ontology schema is showed in \autoref{fig:schemaExample}.
+An example of an ontology schema is shown in \autoref{fig:schemaExample}.
 
 ![Example of Schema.\label{fig:schemaExample}](schemaExample400.png){width=150%, height=150%}
 
@@ -132,7 +132,7 @@ Post-execution, users should review the output to ensure accuracy and make neces
 
 # Code Availability
 
-To install Python version of `FAIRmaterials`, simply search for it on the The Python Package Index (PyPI) [@PyPI] website or click [here](https://pypi.org/project/FAIRmaterials/).
+To install Python version of `FAIRmaterials`, simply search for it on the the Python Package Index (PyPI) [@PyPI] website or click [here](https://pypi.org/project/FAIRmaterials/).
 The `FAIRmaterials` R version can be easily accessed on the Comprehensive R Archive Network (CRAN) [@CRAN].
 To install the package, simply search for `FAIRmaterials` on the CRAN website or click [here](https://cran.r-project.org/web/packages/FAIRmaterials/index.html). The code for both versions can also be accessed through a public GitHub found [here](https://github.com/cwru-sdle/FAIRmaterials) and more documentation for the packages can be found [here](https://cwrusdle.bitbucket.io).
 
